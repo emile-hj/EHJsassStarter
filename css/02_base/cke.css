@@ -1,0 +1,507 @@
+@charset "UTF-8";
+/* Set Initial grid values
+   'fixed' means it is a fixed numerical value
+*********************************** */
+/* 	Fonts – Specfics
+    These are not to be used directly in styling,
+    please use the generic values further below!
+*********************************** */
+/* 	Fonts – Generic values
+    Use these values in styling!
+*********************************** */
+/*	Colours - Specifics
+    These are not to be used directly in styling,
+    please use the generic values further below!
+***********************************  */
+/*	Colours - Generic values
+    Use these values in styling!
+***********************************  */
+/*	Size variables
+***********************************  */
+/*	Transition variables
+***********************************  */
+/*	Selector variables
+***********************************  */
+/* Media Queries
+*********************************** */
+/*
+  I am working with REMs for the whole site, except for the media queries which is not viable
+  These media queries are better suited to mobile first.
+*/
+/*  SVG
+*********************************** */
+/*  PNG
+*********************************** */
+/*  Display mixins
+*********************************** */
+/*  Show/hide mixins
+*********************************** */
+/*  Type hierarchy size mixins
+    - Do not use typeHierarchySizes to set type styles on text elements!
+    The purpose of this is to use relative units on non-text elements
+    (without applying the entire type style, which is unnecessary)
+*********************************** */
+/*  'Paragraph style' Mixins
+    - These are actual type styles, apply these to text elements
+*********************************** */
+/*  Animate Into Viewport effects
+*********************************** */
+.field--name-body,
+.cke_editable {
+  /*	Paragraphs
+  ************************************* */
+}
+.field--name-body p,
+.field--name-body li,
+.cke_editable p,
+.cke_editable li {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4em;
+  font-size: 1rem;
+  margin-bottom: 1.45em;
+}
+@media only screen and (min-width: 768px) {
+  .field--name-body p,
+.field--name-body li,
+.cke_editable p,
+.cke_editable li {
+    font-size: 1.0625rem;
+  }
+}
+@media only screen and (min-width: 1272px) {
+  .field--name-body p,
+.field--name-body li,
+.cke_editable p,
+.cke_editable li {
+    font-size: 1.125rem;
+  }
+}
+.field--name-body p em,
+.field--name-body li em,
+.cke_editable p em,
+.cke_editable li em {
+  font-style: italic;
+}
+.field--name-body p u,
+.field--name-body li u,
+.cke_editable p u,
+.cke_editable li u {
+  text-decoration: underline;
+}
+.field--name-body p strong,
+.field--name-body li strong,
+.cke_editable p strong,
+.cke_editable li strong {
+  font-weight: 700;
+}
+.field--name-body a:not(.cta), .field--name-body a:not(.cta):link,
+.cke_editable a:not(.cta),
+.cke_editable a:not(.cta):link {
+  color: #000000;
+  border-bottom: 0.125rem solid #4C8076;
+}
+.field--name-body a:not(.cta):hover, .field--name-body a:not(.cta):focus, .field--name-body a:not(.cta):link:hover, .field--name-body a:not(.cta):link:focus,
+.cke_editable a:not(.cta):hover,
+.cke_editable a:not(.cta):focus,
+.cke_editable a:not(.cta):link:hover,
+.cke_editable a:not(.cta):link:focus {
+  color: #4C8076;
+}
+
+.field--name-body,
+.cke_editable {
+  /*  Headings
+  ************************************* */
+  /*  Lists
+  ************************************* */
+  /*  Images
+  ************************************* */
+}
+.field--name-body .cta_right,
+.cke_editable .cta_right {
+  display: inline-block;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.4em;
+  letter-spacing: 0;
+  padding-top: 0.9em;
+  padding-bottom: 0.85em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  border: thin solid #000000;
+}
+.field--name-body .cta_right, .field--name-body .cta_right:link,
+.cke_editable .cta_right,
+.cke_editable .cta_right:link {
+  color: white;
+  background: none;
+  background-color: #000000;
+}
+.field--name-body .cta_right:hover, .field--name-body .cta_right:focus,
+.cke_editable .cta_right:hover,
+.cke_editable .cta_right:focus {
+  color: #000000;
+  background-color: #F42272;
+  border-color: #F42272;
+}
+.field--name-body .cta_right:hover, .field--name-body .cta_right:focus,
+.cke_editable .cta_right:hover,
+.cke_editable .cta_right:focus {
+  color: #000000;
+  background-color: #F42272;
+}
+.field--name-body h2,
+.cke_editable h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1.25em;
+  letter-spacing: 0;
+  font-size: 1.375rem;
+  margin-top: 0;
+  margin-bottom: 0.85em;
+  margin-top: 1.7em;
+  margin-bottom: 1.25em;
+}
+@media only screen and (min-width: 840px) {
+  .field--name-body h2,
+.cke_editable h2 {
+    font-size: 1.5625rem;
+  }
+}
+@media only screen and (min-width: 1488px) {
+  .field--name-body h2,
+.cke_editable h2 {
+    font-size: 1.6875rem;
+  }
+}
+.field--name-body h2 em,
+.cke_editable h2 em {
+  font-style: normal;
+}
+.field--name-body h2 u,
+.cke_editable h2 u {
+  text-decoration: none;
+}
+.field--name-body h2 a,
+.cke_editable h2 a {
+  color: #F42272;
+  text-decoration: none;
+  border-bottom: 0;
+}
+.field--name-body h2 strong,
+.cke_editable h2 strong {
+  font-weight: 500;
+}
+.field--name-body h3,
+.cke_editable h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.4em;
+  letter-spacing: 0;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.85em;
+}
+@media only screen and (min-width: 624px) {
+  .field--name-body h3,
+.cke_editable h3 {
+    font-size: 1.1875rem;
+  }
+}
+@media only screen and (min-width: 1488px) {
+  .field--name-body h3,
+.cke_editable h3 {
+    font-size: 1.3125rem;
+  }
+}
+.field--name-body h3 em,
+.cke_editable h3 em {
+  font-style: normal;
+}
+.field--name-body h3 u,
+.cke_editable h3 u {
+  text-decoration: none;
+}
+.field--name-body h3 a,
+.cke_editable h3 a {
+  color: #F42272;
+  text-decoration: none;
+  border-bottom: 0;
+}
+.field--name-body h3 strong,
+.cke_editable h3 strong {
+  font-weight: 500;
+}
+.field--name-body ul,
+.field--name-body ol,
+.cke_editable ul,
+.cke_editable ol {
+  font-size: 1rem;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  clear: both;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .field--name-body ul,
+.field--name-body ol,
+.cke_editable ul,
+.cke_editable ol {
+    font-size: 1.0625rem;
+  }
+}
+@media only screen and (min-width: 1272px) {
+  .field--name-body ul,
+.field--name-body ol,
+.cke_editable ul,
+.cke_editable ol {
+    font-size: 1.125rem;
+  }
+}
+.field--name-body ul li,
+.field--name-body ol li,
+.cke_editable ul li,
+.cke_editable ol li {
+  position: relative;
+  list-style-type: none;
+  list-style-image: none;
+  position: relative;
+  padding-left: 31px;
+}
+.field--name-body ul li::before,
+.field--name-body ol li::before,
+.cke_editable ul li::before,
+.cke_editable ol li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  color: #64BAAA;
+}
+.field--name-body ul li p,
+.field--name-body ol li p,
+.cke_editable ul li p,
+.cke_editable ol li p {
+  margin: 0;
+}
+.field--name-body ul li ul,
+.field--name-body ul li ol,
+.field--name-body ol li ul,
+.field--name-body ol li ol,
+.cke_editable ul li ul,
+.cke_editable ul li ol,
+.cke_editable ol li ul,
+.cke_editable ol li ol {
+  margin-top: 0.5em;
+}
+.field--name-body ul .cta,
+.field--name-body ol .cta,
+.cke_editable ul .cta,
+.cke_editable ol .cta {
+  padding: 0;
+  border: 0;
+}
+.field--name-body ul .cta::before, .field--name-body ul .cta::after,
+.field--name-body ol .cta::before,
+.field--name-body ol .cta::after,
+.cke_editable ul .cta::before,
+.cke_editable ul .cta::after,
+.cke_editable ol .cta::before,
+.cke_editable ol .cta::after {
+  content: none;
+}
+.field--name-body ul .cta:hover, .field--name-body ul .cta:focus,
+.field--name-body ol .cta:hover,
+.field--name-body ol .cta:focus,
+.cke_editable ul .cta:hover,
+.cke_editable ul .cta:focus,
+.cke_editable ol .cta:hover,
+.cke_editable ol .cta:focus {
+  background-color: transparent !important;
+}
+.field--name-body ul,
+.cke_editable ul {
+  list-style-type: none;
+}
+.field--name-body ul li::before,
+.cke_editable ul li::before {
+  content: "–";
+}
+.field--name-body ul > li::before,
+.cke_editable ul > li::before {
+  content: "–";
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -9999px;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #4C8076;
+}
+.field--name-body ul ul,
+.field--name-body ul ol,
+.cke_editable ul ul,
+.cke_editable ul ol {
+  margin-bottom: 0;
+}
+.field--name-body ul ul > li::before,
+.cke_editable ul ul > li::before {
+  background-color: #64BAAA;
+}
+.field--name-body ol,
+.cke_editable ol {
+  counter-reset: item;
+}
+.field--name-body ol > li::before,
+.cke_editable ol > li::before {
+  counter-increment: item;
+  content: counter(item);
+}
+.field--name-body ol li ul,
+.field--name-body ol li ol,
+.cke_editable ol li ul,
+.cke_editable ol li ol {
+  margin-bottom: 0;
+}
+.field--name-body ol li ul li li::before,
+.field--name-body ol li ol li li::before,
+.cke_editable ol li ul li li::before,
+.cke_editable ol li ol li li::before {
+  content: "•";
+}
+.field--name-body img,
+.field--name-body figure,
+.cke_editable img,
+.cke_editable figure {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.field--name-body img,
+.cke_editable img {
+  display: block;
+}
+.field--name-body figure,
+.cke_editable figure {
+  display: table;
+  margin-left: 0;
+  margin-right: 0;
+}
+.field--name-body figure > *,
+.cke_editable figure > * {
+  display: table-row;
+}
+.field--name-body figure br,
+.cke_editable figure br {
+  display: none;
+}
+.field--name-body figure,
+.field--name-body figure img,
+.cke_editable figure,
+.cke_editable figure img {
+  max-width: 100%;
+  height: auto;
+}
+.field--name-body figure img,
+.cke_editable figure img {
+  margin: 0;
+  z-index: 1;
+}
+.field--name-body figure figcaption,
+.cke_editable figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4em;
+  font-size: 1rem;
+  color: #64BAAA;
+  padding-top: 1.55em;
+}
+.field--name-body .align-left,
+.field--name-body .align-right,
+.cke_editable .align-left,
+.cke_editable .align-right {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.field--name-body .align-left img,
+.field--name-body .align-right img,
+.cke_editable .align-left img,
+.cke_editable .align-right img {
+  margin: 0;
+}
+@media only screen and (max-width: 551px) {
+  .field--name-body .align-left img,
+.field--name-body .align-right img,
+.cke_editable .align-left img,
+.cke_editable .align-right img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 552px) {
+  .field--name-body .align-left,
+.field--name-body .align-right,
+.cke_editable .align-left,
+.cke_editable .align-right {
+    max-width: 45%;
+  }
+}
+@media only screen and (min-width: 552px) {
+  .field--name-body .align-left,
+.cke_editable .align-left {
+    float: left;
+    clear: left;
+    margin-right: 2.5rem;
+  }
+}
+@media only screen and (min-width: 552px) {
+  .field--name-body .align-right,
+.cke_editable .align-right {
+    float: right;
+    clear: right;
+    margin-left: 2.5rem;
+  }
+}
+.field--name-body .align-center,
+.field--name-body .align-center img,
+.cke_editable .align-center,
+.cke_editable .align-center img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.responsive-embed {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cke_editable hr,
+.field-name-body hr {
+  border: 0;
+  border-bottom: thin solid #F42272;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.field--name-body > *:first-child,
+.field--type-text-long > *:first-child {
+  margin-top: 0 !important;
+}
+.field--name-body > *:last-child,
+.field--type-text-long > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/*# sourceMappingURL=cke.css.map */

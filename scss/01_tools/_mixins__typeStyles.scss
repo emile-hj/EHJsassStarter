@@ -1,0 +1,222 @@
+
+/*  Type hierarchy size mixins
+    - Do not use typeHierarchySizes to set type styles on text elements!
+    The purpose of this is to use relative units on non-text elements
+    (without applying the entire type style, which is unnecessary)
+*********************************** */
+@mixin typeHierarchySizes($name) {
+  @if $name == bodyNormal {
+    @include calcRemSize(16); // INITAL/UNSET
+
+    @include min_768 {
+      @include calcRemSize(17); // INITAL/UNSET
+    }
+    @include min_1272 {
+      @include calcRemSize(18); // INITAL/UNSET
+    }
+  }
+  @else if $name == bodySmall {
+    @include calcRemSize(16); // INITAL/UNSET
+  }
+
+  @else if $name == h1 {
+    @include calcRemSize(30); // INITAL/UNSET
+
+    @include min_840 {
+      @include calcRemSize(45); // INITAL/UNSET
+    }
+    @include min_1488 {
+      @include calcRemSize(56); // INITAL/UNSET
+    }
+  }
+  @else if $name == h2 {
+    @include calcRemSize(27); // INITAL/UNSET
+
+    @include min_840 {
+      @include calcRemSize(33); // INITAL/UNSET
+    }
+    @include min_1488 {
+      @include calcRemSize(37); // INITAL/UNSET
+    }
+
+  }
+  @else if $name == h3 {
+    @include calcRemSize(22); // INITAL/UNSET
+
+    @include min_840 {
+      @include calcRemSize(25); // INITAL/UNSET
+    }
+    @include min_1488 {
+      @include calcRemSize(27); // INITAL/UNSET
+    }
+  }
+  @else if $name == h4 {
+    @include calcRemSize(16); // INITAL/UNSET
+
+    @include min_624 {
+      @include calcRemSize(19); // INITAL/UNSET
+    }
+    @include min_1488 {
+      @include calcRemSize(21); // INITAL/UNSET
+    }
+  }
+
+  @else if $name == button_default {
+    @include calcRemSize(15); // INITAL/UNSET
+
+    @include min_768 {
+      @include calcRemSize(17); // INITAL/UNSET
+    }
+
+    @include min_984 {
+      @include calcRemSize(18); // INITAL/UNSET
+    }
+  }
+
+  @else if $name == menu_normal {
+    @include typeHierarchySizes(bodySmall); // INITAL/UNSET
+  }
+
+
+  @else if $name == tag_normal {
+    @include calcRemSize(12); // INITAL/UNSET
+
+
+    @include min_768 {
+      @include calcRemSize(13); // INITAL/UNSET
+    }
+
+  }
+
+}
+
+
+/*  'Paragraph style' Mixins
+    - These are actual type styles, apply these to text elements
+*********************************** */
+// Body copy
+@mixin typeStyle($category:body, $name:normal) {
+
+
+  @if $category == body {
+    font-family:$font__body; // INITAL/UNSET
+    font-weight:400; // INITAL/UNSET
+    letter-spacing:0; // INITAL/UNSET
+
+    text-transform:none; // INITAL/UNSET
+
+    // Important: This style is the basis for the site, applied to the body
+    @if $name == normal {
+      line-height:1.4em; // INITAL/UNSET
+      @include typeHierarchySizes(bodyNormal);
+    }
+    @else if $name == small {
+      line-height:1.4em; // INITAL/UNSET
+      @include typeHierarchySizes(bodySmall);
+    }
+  }
+
+  @else if $category == heading {
+    @if $name == h1 {
+      font-family:$font__heading; // INITAL/UNSET
+      font-weight:900; // INITAL/UNSET
+      line-height:1.15em; // INITAL/UNSET
+      letter-spacing:0; // INITAL/UNSET
+
+      @include typeHierarchySizes(h1);
+
+      margin:{
+        top:0; // INITAL/UNSET
+        bottom:0.7em; // INITAL/UNSET
+      }
+    }
+    @else if $name == h2 {
+      font-family:$font__heading; // INITAL/UNSET
+      font-weight:700; // INITAL/UNSET
+      line-height:1.225em; // INITAL/UNSET
+      letter-spacing:0; // INITAL/UNSET
+
+      @include typeHierarchySizes(h2);
+
+      margin:{
+        top:0; // INITAL/UNSET
+        bottom:1em; // INITAL/UNSET
+      }
+    }
+    @else if $name == h3 {
+      font-family:$font__heading; // INITAL/UNSET
+      font-weight:900; // INITAL/UNSET
+      line-height:1.25em; // INITAL/UNSET
+      letter-spacing: 0; // INITAL/UNSET
+
+      @include typeHierarchySizes(h3);
+
+      margin:{
+        top:0; // INITAL/UNSET
+        bottom:0.85em; // INITAL/UNSET
+      }
+    }
+    @else if $name == h4 {
+      font-family:$font__heading; // INITAL/UNSET
+      font-weight:700; // INITAL/UNSET
+      line-height:1.4em; // INITAL/UNSET
+      letter-spacing: 0; // INITAL/UNSET
+
+      @include typeHierarchySizes(h4);
+
+      margin:{
+        top:0; // INITAL/UNSET
+        bottom:0.85em; // INITAL/UNSET
+      }
+    }
+    @else if $name == h5 {
+      font-family:$font__heading; // INITAL/UNSET
+      font-weight:500; // INITAL/UNSET
+      line-height:1.2em; // INITAL/UNSET
+      letter-spacing:0; // INITAL/UNSET
+
+      @include typeHierarchySizes(h5);
+
+      margin:{
+        top:0; // INITAL/UNSET
+        bottom:0.525em; // INITAL/UNSET
+      }
+    }
+  }
+
+  @else if $category == menu {
+    @if $name == normal {
+      font-family:$font__heading; // INITAL/UNSET
+      font-weight:700; // INITAL/UNSET
+      line-height:1.25em; // INITAL/UNSET
+      letter-spacing:0; // INITAL/UNSET
+
+      @include typeHierarchySizes(menu_normal);
+    }
+  }
+
+  @else if $category == button {
+    @if $name == default {
+      font-family:$font__heading; // INITAL/UNSET
+      font-weight:700; // INITAL/UNSET
+      line-height: 1.4em; // INITAL/UNSET
+      letter-spacing: 0; // INITAL/UNSET
+
+      @include typeHierarchySizes(buttonDefault);
+    }
+  }
+
+  @else if $category == tag {
+    @if $name == normal {
+      font-family:$font__body; // INITAL/UNSET
+      font-weight:700; // INITAL/UNSET
+      line-height:$lineHeight__tag_normal; // INITAL/UNSET
+
+      text-transform:uppercase; // INITAL/UNSET
+      letter-spacing:0.035em; // INITAL/UNSET
+
+      @include typeHierarchySizes(tag_normal);
+    }
+  }
+
+}

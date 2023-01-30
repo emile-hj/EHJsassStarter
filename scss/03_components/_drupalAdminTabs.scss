@@ -1,0 +1,40 @@
+
+// Admin tabs
+.block-local-tasks-block {
+  margin:{
+    bottom:2rem;
+  }
+
+  ul {
+    list-style:none;
+    padding: 0;
+    margin:0;
+
+    @include display__flexbox;
+  }
+  li {
+    margin-right:6px;
+    &:last-child {
+      margin-right:0;
+    }
+  }
+  a {
+    display:block;
+    @include typeStyle(heading,h4);
+
+    padding: 0.5em 0.75em;
+    border: 1px solid $color__black;
+    margin:0;
+
+
+
+    // active, hover, focus
+    &.is-active,
+    &:hover,
+    &:focus {
+      background-color: $color__alpha;
+      color:white;
+    }
+  }
+
+}

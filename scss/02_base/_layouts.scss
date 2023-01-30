@@ -1,0 +1,95 @@
+
+/*  Site layout and structure
+*********************************** */
+
+html {
+  height:100%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  -webkit-overflow-scrolling: touch;
+
+  &.modal_isOpen {
+    overflow:hidden;
+  }
+}
+
+body {
+  position:relative;
+
+  min-width:$width__minSiteWidth_PX;
+}
+
+.thePage {
+  position:relative;
+
+  height:100%;
+  z-index: 2;
+
+  overflow:hidden;
+}
+
+/* Site layout – Full width sections
+******************************** */
+.fullWidth {
+  display:block;
+  width:100%;
+  background-color:transparent;
+
+  @include siteSidePaddings;
+
+  &.noPadding {
+    padding:{
+      left:0;
+      right:0;
+    }
+  }
+
+  .sectionInner {
+    max-width: $grid_maxWidth;
+
+    margin: 0 auto;
+
+    &.widthUnconstrained {
+      max-width:none;
+    }
+
+  }
+}
+
+
+.mainContent {
+
+  // .body-sidebars-second & {
+  //
+  //   @include mq_breakpoint__sidebar_and_content_sidebyside {
+  //
+  //   }
+  //
+  // }
+}
+
+
+/*  Default layouts:
+************************************* */
+.gridList {
+  list-style:none;
+  padding:0;
+  margin:0;
+
+  &.style__1col {
+    @include grid(1,true);
+  }
+  &.style__4col {
+    @include grid(1,true);
+
+    @include min_552 {
+      @include grid(2);
+    }
+    @include min_840 {
+      @include grid(3);
+    }
+    @include min_1128 {
+      @include grid(4);
+    }
+  }
+}

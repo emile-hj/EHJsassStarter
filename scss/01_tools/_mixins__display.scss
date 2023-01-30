@@ -1,0 +1,153 @@
+
+/*  Display mixins
+*********************************** */
+@mixin grid($columnCount, $isNew:null) {
+	@if $isNew {
+		display:grid;
+		grid-gap:$grid_gutterWidth_rem;
+    grid-row-gap:#{$grid_gutterWidth_fixed * 2}rem;
+	}
+	grid-template-columns: repeat($columnCount, 1fr);
+}
+
+// Make element a block and hide its text
+@mixin display__block_hideText {
+  display:block;
+  overflow:hidden;
+  text-align:left;
+  text-indent:-9999px;
+}
+@mixin display__inlineBlock_hideText {
+  display:inline-block;
+  overflow:hidden;
+  text-align:left;
+  text-indent:-9999px;
+}
+
+@mixin display__flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin display__inlineFlexbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin alignItems($align) {
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+}
+
+@mixin order($order) {
+  -webkit-box-ordinal-group: $order;
+  -ms-flex-order: $order;
+  order: $order;
+}
+@mixin justifyContent($justify) {
+  @if $justify == space-between {
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+  }
+  @else if $justify == space-around {
+    -ms-flex-pack:distribute;
+    justify-content:space-around;
+  }
+  @else if $justify == flex-start {
+    -webkit-box-pack:start;
+    -ms-flex-pack:start;
+    justify-content:flex-start;
+  }
+  @else if $justify == flex-end {
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+    justify-content:flex-end
+  }
+  @else if $justify == center {
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+  }
+}
+@mixin flexDirection($direction) {
+  @if $direction == row {
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
+    flex-direction:row;
+  }
+  @else if $direction == column {
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+  }
+  @else if $direction == row-reverse {
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:reverse;
+    -ms-flex-direction:row-reverse;
+    flex-direction:row-reverse
+  }
+}
+@mixin flexShrink($number) {
+  -ms-flex-negative:$number;
+  flex-shrink:$number;
+}
+@mixin flexGrow($number) {
+  -webkit-box-flex:$number;
+  -ms-flex-positive:$number;
+  flex-grow:$number;
+}
+@mixin flexWrap($wrap) {
+  -ms-flex-wrap:$wrap;
+  flex-wrap:$wrap;
+}
+
+// Clear fix elements
+@mixin clearFix {
+  &::after {
+    content:" ";
+    display:block;
+    clear:both;
+  }
+}
+
+
+/*  Show/hide mixins
+*********************************** */
+@mixin elementInvisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the elementInvisible effect.
+@mixin elementInvisibleOff {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin elementFocusable {
+  @include elementInvisible;
+
+  &:active,
+  &:focus {
+    @include elementInvisibleOff;
+  }
+}
+
+
+@mixin calcRemSize($px_size, $property:font-size){
+  $rem_size: math.div($px_size, 16);
+
+  #{$property}: #{$rem_size}rem;
+}

@@ -1,0 +1,57 @@
+
+.owl-stage {
+  @include display__flexbox;
+
+  cursor:grab;
+
+  &:active {
+    cursor:grabbing;
+  }
+}
+
+.caroNav {
+  @include display__flexbox;
+
+  button {
+    @include display__block_hideText;
+
+    @include calcRemSize(34,width);
+    @include calcRemSize(34,height);
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    padding:0;
+
+    border:1px solid $color__defaultText;
+    border-radius: 50%;
+
+    margin:{
+      right:0.45em;
+    }
+
+    &:not(.disabled) {
+      &:hover,
+      &:focus {
+        background-color: $color__beta;
+      }
+    }
+
+    &:last-child {
+      margin-right:0;
+    }
+
+    &.disabled {
+      opacity:0.34;
+      cursor:default;
+    }
+  }
+  .owl-prev {
+
+  }
+  .owl-next {
+
+  }
+
+}
