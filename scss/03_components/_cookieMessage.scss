@@ -18,7 +18,7 @@
 
     @include siteSidePaddings;
 
-    @include display__flexbox;
+   display:flex;
     flex-wrap:wrap;
     justify-content: space-between;
 
@@ -29,7 +29,7 @@
     width:100%;
   }
   #popup-text {
-    @include flexGrow(1);
+    flex-grow:1;
     p {
       display: inline;
     }

@@ -10,8 +10,8 @@
     ul.menu {
       @include typeStyle(menu,normal);
 
-      @include display__flexbox;
-      @include justifyContent(flex-end);
+     display:flex;
+      justify-content:flex-end;
 
       margin:0;
 

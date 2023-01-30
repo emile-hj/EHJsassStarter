@@ -4,10 +4,12 @@
 //
 // .social_media_links {
 // 	list-style:none;
+
+//  display:flex;  
 // 	padding:0;
 // 	margin:0;
 //
-// 	@include display__flexbox;
+
 //
 //
 // 	li {
@@ -57,26 +59,4 @@
 // 		}
 //
 // 	}
-// }
-//
-// .block-social-share,
-// #block-socialmediaaccounts {
-// 	@include display__flexbox;
-// 	@include alignItems(flex-end);
-// 	flex-wrap:wrap;
-//
-// 	h2,
-// 	.social_media_links {
-// 		margin-bottom:0.5rem;
-// 	}
-//
-// 	h2 {
-// 		@include typeStyle__body();
-// 		color:white;
-//
-// 	}
-// 	.social_media_links {
-// 		margin-left:1.5rem;
-// 	}
-//
 // }

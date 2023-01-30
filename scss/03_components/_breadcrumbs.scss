@@ -4,7 +4,7 @@ nav.breadcrumb {
     list-style: none;
     margin:0;
 
-    @include display__flexbox;
+   display:flex;
     @include flexWrap(wrap);
 
     @include typeStyle(body,small);

@@ -1,6 +1,6 @@
 
 .owl-stage {
-  @include display__flexbox;
+ display:flex;
 
   cursor:grab;
 
@@ -10,7 +10,7 @@
 }
 
 .caroNav {
-  @include display__flexbox;
+ display:flex;
 
   button {
     @include display__block_hideText;

@@ -4,8 +4,8 @@ nav.pager {
 
   ul {
     list-style:none;
-    @include display__flexbox;
-    @include justifyContent(center);
+   display:flex;
+    justify-content:center;
 
     padding:0;
   }

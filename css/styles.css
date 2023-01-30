@@ -1367,62 +1367,10 @@ form input[type=search]::-webkit-search-cancel-button {
 }
 
 #header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+  display: block;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100%;
-}
-#header .header_a {
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  margin-right: 1.25rem;
-}
-@media only screen and (min-width: 768px) {
-  #header .header_a {
-    margin-right: 3rem;
-  }
-}
-#header .header_b {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-}
-#header .header_b .region {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-#header .header_b .region > * {
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-}
-#header .header_b .region > *:first-child {
-  margin-left: 0;
-}
-#header .header_b .region .mainNavHeader {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-@media only screen and (min-width: 624px) {
-  #header .header_b .region > * {
-    margin-left: 2.6rem;
-  }
 }
 
 #block-efd9minimal-main-menu .overlay_outer {
@@ -1436,8 +1384,6 @@ form input[type=search]::-webkit-search-cancel-button {
   background-color: transparent;
 }
 #block-efd9minimal-main-menu .overlay_inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -1469,8 +1415,6 @@ form input[type=search]::-webkit-search-cancel-button {
   background-color: rgba(255, 255, 255, 0.5);
 }
 #block-efd9minimal-main-menu .toggle_button_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
 }
@@ -1589,8 +1533,6 @@ form input[type=search]::-webkit-search-cancel-button {
   }
 }
 #block-efd9minimal-main-menu .overlay_modes {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   position: relative;
   overflow: hidden;
@@ -1599,8 +1541,6 @@ form input[type=search]::-webkit-search-cancel-button {
   margin-left: -1rem;
 }
 #block-efd9minimal-main-menu .overlay_mode {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -1626,11 +1566,7 @@ form input[type=search]::-webkit-search-cancel-button {
 }
 #block-efd9minimal-main-menu .menu_controls {
   font-size: 1.375rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 @media only screen and (min-width: 840px) {
@@ -1647,7 +1583,6 @@ form input[type=search]::-webkit-search-cancel-button {
   display: none;
 }
 #block-efd9minimal-main-menu .collapseLevel {
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   display: block;
   overflow: hidden;
@@ -1671,10 +1606,7 @@ form input[type=search]::-webkit-search-cancel-button {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0.85em;
-  -ms-flex-negative: 1;
   flex-shrink: 1;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   margin: 0;
 }
@@ -1698,8 +1630,6 @@ form input[type=search]::-webkit-search-cancel-button {
   color: #64BAAA;
 }
 #block-efd9minimal-main-menu .overlay_menu {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   position: relative;
   overflow-x: hidden;
@@ -1746,16 +1676,10 @@ form input[type=search]::-webkit-search-cancel-button {
   margin-bottom: 0;
 }
 #block-efd9minimal-main-menu .overlay_menu ul.menu .li_inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 #block-efd9minimal-main-menu .overlay_menu ul.menu a.menu-item {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   display: block;
   color: #000000;
@@ -1821,12 +1745,8 @@ form input[type=search]::-webkit-search-cancel-button {
   }
 }
 #block-efd9minimal-main-menu .overlay_mode_search form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: nowrap;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
   align-items: flex-end;
   padding-bottom: 0.35em;
   border-bottom: thin solid #000000;
@@ -1910,8 +1830,6 @@ form input[type=search]::-webkit-search-cancel-button {
   color: white;
 }
 #block-efd9minimal-main-menu .overlay_mode_search .form-item {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   margin-bottom: 0;
 }
@@ -1938,11 +1856,7 @@ form input[type=search]::-webkit-search-cancel-button {
     line-height: 1.25em;
     letter-spacing: 0;
     font-size: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
     margin: 0;
   }
@@ -2176,12 +2090,8 @@ form input[type=search]::-webkit-search-cancel-button {
   margin: 0;
 }
 .sidebar ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .sidebar ul a {
@@ -2268,11 +2178,7 @@ nav.pager {
 }
 nav.pager ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 0;
 }
@@ -2296,8 +2202,6 @@ nav.pager li:last-child {
   margin: 0 auto;
   padding-left: 4.5%;
   padding-right: 4.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2325,8 +2229,6 @@ nav.pager li:last-child {
   width: 100%;
 }
 #sliding-popup #popup-text {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 #sliding-popup #popup-text p {
@@ -2454,8 +2356,6 @@ nav.pager li:last-child {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .block-local-tasks-block li {

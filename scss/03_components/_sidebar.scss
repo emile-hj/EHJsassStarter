@@ -33,9 +33,9 @@
 
 
     li {
-      @include display__flexbox;
+     display:flex;
       flex-wrap:wrap;
-      @include alignItems(center);
+      align-items:center;
     }
 
     a {
@@ -50,7 +50,7 @@
 
       // // Pseudo for arrow icon
       // &::after {
-      //   @include flexShrink(0);
+      //   flex-shrink:0;
       //
       //   content:" ";
       //   display:block;

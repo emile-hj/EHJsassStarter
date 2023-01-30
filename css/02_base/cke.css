@@ -65,17 +65,17 @@
 }
 @media only screen and (min-width: 768px) {
   .field--name-body p,
-.field--name-body li,
-.cke_editable p,
-.cke_editable li {
+  .field--name-body li,
+  .cke_editable p,
+  .cke_editable li {
     font-size: 1.0625rem;
   }
 }
 @media only screen and (min-width: 1272px) {
   .field--name-body p,
-.field--name-body li,
-.cke_editable p,
-.cke_editable li {
+  .field--name-body li,
+  .cke_editable p,
+  .cke_editable li {
     font-size: 1.125rem;
   }
 }
@@ -168,13 +168,13 @@
 }
 @media only screen and (min-width: 840px) {
   .field--name-body h2,
-.cke_editable h2 {
+  .cke_editable h2 {
     font-size: 1.5625rem;
   }
 }
 @media only screen and (min-width: 1488px) {
   .field--name-body h2,
-.cke_editable h2 {
+  .cke_editable h2 {
     font-size: 1.6875rem;
   }
 }
@@ -208,13 +208,13 @@
 }
 @media only screen and (min-width: 624px) {
   .field--name-body h3,
-.cke_editable h3 {
+  .cke_editable h3 {
     font-size: 1.1875rem;
   }
 }
 @media only screen and (min-width: 1488px) {
   .field--name-body h3,
-.cke_editable h3 {
+  .cke_editable h3 {
     font-size: 1.3125rem;
   }
 }
@@ -248,17 +248,17 @@
 }
 @media only screen and (min-width: 768px) {
   .field--name-body ul,
-.field--name-body ol,
-.cke_editable ul,
-.cke_editable ol {
+  .field--name-body ol,
+  .cke_editable ul,
+  .cke_editable ol {
     font-size: 1.0625rem;
   }
 }
 @media only screen and (min-width: 1272px) {
   .field--name-body ul,
-.field--name-body ol,
-.cke_editable ul,
-.cke_editable ol {
+  .field--name-body ol,
+  .cke_editable ul,
+  .cke_editable ol {
     font-size: 1.125rem;
   }
 }
@@ -443,24 +443,24 @@
 }
 @media only screen and (max-width: 551px) {
   .field--name-body .align-left img,
-.field--name-body .align-right img,
-.cke_editable .align-left img,
-.cke_editable .align-right img {
+  .field--name-body .align-right img,
+  .cke_editable .align-left img,
+  .cke_editable .align-right img {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media only screen and (min-width: 552px) {
   .field--name-body .align-left,
-.field--name-body .align-right,
-.cke_editable .align-left,
-.cke_editable .align-right {
+  .field--name-body .align-right,
+  .cke_editable .align-left,
+  .cke_editable .align-right {
     max-width: 45%;
   }
 }
 @media only screen and (min-width: 552px) {
   .field--name-body .align-left,
-.cke_editable .align-left {
+  .cke_editable .align-left {
     float: left;
     clear: left;
     margin-right: 2.5rem;
@@ -468,7 +468,7 @@
 }
 @media only screen and (min-width: 552px) {
   .field--name-body .align-right,
-.cke_editable .align-right {
+  .cke_editable .align-right {
     float: right;
     clear: right;
     margin-left: 2.5rem;
