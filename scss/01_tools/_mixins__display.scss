@@ -1,6 +1,30 @@
 
 /*  Display mixins
 *********************************** */
+@mixin clamp(
+  $property,
+  $minSize,
+  $maxSize,
+  $maxBreakpoint
+) {
+  $minSizeRem: math.div($minSize,16);
+  $minSizeRem: #{$minSizeRem}rem;
+
+  $maxSizeRem: math.div($maxSize,16);
+  $maxSizeRem: #{$maxSizeRem}rem;
+
+  $preferredSize: math.div($maxSize, $maxBreakpoint);
+  $preferredSize: $preferredSize * 100;
+  $preferredSize: #{$preferredSize}vw;
+
+  #{$property}:clamp(
+    $minSizeRem,
+    $preferredSize,
+    $maxSizeRem
+  );
+
+}
+
 @mixin grid($columnCount, $isNew:null) {
 	@if $isNew {
 		display:grid;

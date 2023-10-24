@@ -8,9 +8,9 @@ html {
   overflow-y:auto;
   -webkit-overflow-scrolling: touch;
 
-  &.modal_isOpen {
-    overflow:hidden;
-  }
+  // &.modal_isOpen {
+  //   overflow:hidden;
+  // }
 }
 
 body {
@@ -28,14 +28,33 @@ body {
   overflow:hidden;
 }
 
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* Site layout – Full width sections
 ******************************** */
-.fullWidth {
+.pane {
   display:block;
   width:100%;
   background-color:transparent;
 
-  @include siteSidePaddings;
+  padding:{
+    @include clamp(left,20,85,1440);
+    @include clamp(right,20,85,1440);
+  }
 
   &.noPadding {
     padding:{
@@ -44,7 +63,7 @@ body {
     }
   }
 
-  .sectionInner {
+  .paneInner {
     max-width: $grid_maxWidth;
 
     margin: 0 auto;
@@ -59,13 +78,6 @@ body {
 
 .mainContent {
 
-  // .body-sidebars-second & {
-  //
-  //   @include mq_breakpoint__sidebar_and_content_sidebyside {
-  //
-  //   }
-  //
-  // }
 }
 
 
@@ -91,5 +103,11 @@ body {
     @include min_1128 {
       @include grid(4);
     }
+  }
+}
+
+.menu {
+  @include in_print {
+    display:none;
   }
 }

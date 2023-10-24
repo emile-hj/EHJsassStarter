@@ -16,7 +16,6 @@
 }
 
 
-
 @mixin burgerButton {
   .line {
     display: block;
@@ -78,6 +77,30 @@
   }
 }
 
+@mixin fullVW_bgColor($color, $pseudo:before) {
+  position:relative;
+
+
+  // pseudo for 100vw bg color
+  &::#{$pseudo} {
+    content:" ";
+    display:block;
+    position:absolute;
+    z-index:-1;
+    left:50%;
+    top:0;
+
+    width:110vw;
+    height:100%;
+
+    min-width:$width__minSiteWidth_PX;
+
+    background-color: $color;
+
+    transform:translateX(-50%);
+  }
+}
+
 
 $space_side--mobile:4.5%;
 $space_side--mobile--large:4%;
@@ -93,12 +116,6 @@ $space_side--desktop:2rem;
     padding:{
       left: $space_side--mobile--large;
       right:$space_side--mobile--large;
-    }
-  }
-  @include min_552 {
-    padding:{
-      left: $space_side--mobile--large;
-      right: $space_side--mobile--large;
     }
   }
   @include min_696 {

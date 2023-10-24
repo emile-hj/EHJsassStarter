@@ -4,7 +4,7 @@
 
 
 // Lowest common denominator, all text formats have these styles
-.field--name-body,
+.field--type-text-long,
 .cke_editable {
 
   /*	Paragraphs
@@ -37,7 +37,7 @@
       border-bottom:0.125rem solid $color__beta;
 
       &:hover,
-      &:focus {
+      &:focus-visible {
        color:$color__beta;
        // border-color:white;
       }
@@ -48,7 +48,7 @@
 }
 
 // More advanced text formats have these styles
-.field--name-body,
+.field--type-text-long,
 .cke_editable {
 
   .cta_right {
@@ -381,7 +381,11 @@
 
 }
 
-
+.cke_editable {
+  strong {
+    font-weight:700;
+  }
+}
 
 .responsive-embed {
   margin:{
@@ -404,7 +408,6 @@
 }
 
 // Remove top margin from first body item
-.field--name-body,
 .field--type-text-long {
   > *:first-child {
     margin-top:0 !important;

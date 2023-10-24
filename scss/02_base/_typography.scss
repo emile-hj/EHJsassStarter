@@ -24,19 +24,14 @@ body {
 a {
   &,
   &:link {
-    color:$color__beta;
-    text-decoration:none;
-  }
-
-  p & {
-    border-bottom:1px solid $color__beta;
-
-    &:hover,
-    &:focus {
-      color:$color__beta;
-    }
+    color:$color__defaultText;
+    text-decoration:underline;
+    text-decoration-color:$color__alpha;
+    text-decoration-thickness:1px;
+    text-underline-offset: 0.25em;
   }
 }
+
 p {
 	@include typeStyle(body,normal);
   margin:0 0 1em;
@@ -51,6 +46,12 @@ h2 {
 }
 h3 {
   @include typeStyle(heading,h3);
+}
+h4 {
+  @include typeStyle(heading,h4);
+}
+h5 {
+  @include typeStyle(heading,h5);
 }
 
 .field--name-field-introduction {

@@ -260,6 +260,11 @@ $mq_336  : 336px;
     @content;
   }
 }
+@mixin from_1056_to_840 {
+  @media only screen and (min-width : $mq_840) and (max-width : $mq_1056 - 1) {
+    @content;
+  }
+}
 @mixin from_1056_to_768 {
   @media only screen and (min-width : $mq_768) and (max-width : $mq_1056 - 1) {
     @content;
@@ -378,6 +383,11 @@ $mq_336  : 336px;
 }
 @mixin from_840_to_624 {
   @media only screen and (min-width : $mq_624) and (max-width : $mq_840 - 1)  {
+    @content;
+  }
+}
+@mixin from_840_to_552 {
+  @media only screen and (min-width : $mq_552) and (max-width : $mq_840 - 1) {
     @content;
   }
 }
@@ -561,31 +571,31 @@ $mq_336  : 336px;
   }
 }
 
-@mixin mq_breakpoint__burger_menu_not_available {
+@mixin mq__burgerMenuNotAvailable {
   @include min_984 {
     @content;
   }
 }
-@mixin mq_breakpoint__burger_menu_is_available {
+@mixin mq__burgerMenuIsAvailable {
   @include max_984 {
     @content;
   }
 }
 
-@mixin mq_breakpoint__standard4colLayout_breaks3colto4col {
-  @include min_984 {
-    @content;
-  }
-}
+// @mixin mq_breakpoint__standard4colLayout_breaks3colto4col {
+//   @include min_984 {
+//     @content;
+//   }
+// }
 
-@mixin mq_breakpoint__standardSquareButtons_atDesktopSize {
-  @include min_552 {
-    @content;
-  }
-}
+// @mixin mq_breakpoint__standardSquareButtons_atDesktopSize {
+//   @include min_552 {
+//     @content;
+//   }
+// }
 
-@mixin mq_breakpoint__fullLayout_Main8colWithSide4col_mainNextToSide {
-  @include min_984 {
-    @content;
-  }
-}
+// @mixin mq_breakpoint__fullLayout_Main8colWithSide4col_mainNextToSide {
+//   @include min_984 {
+//     @content;
+//   }
+// }

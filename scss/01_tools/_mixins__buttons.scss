@@ -54,7 +54,7 @@ $space__side_in_button_default:1.25em;
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     @include buttonPartial__basicColors(
       null,
       $textColor--hov,
@@ -87,47 +87,13 @@ $space__side_in_button_default:1.25em;
     // }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       @include buttonPartial__basicColors(
         null,
         $textColor--hov,
         $bgColor--hov
       );
     }
-
-    // @if $icon == arrow_right {
-    //   @include display__inlineFlexbox;
-    //   @include align_items(center);
-    //
-    //   // pseudo for arrow
-    //   &::after {
-    //     content:" ";
-    //     display:block;
-    //     @include calcRemSize(16,width);
-    //     @include calcRemSize(14,height);
-    //     background-repeat:no-repeat;
-    //     // background-size: auto 0.875em;
-    //
-    //     margin-left: 0.6em;
-    //
-    //     transform:translateX(0px);
-    //     transition:transform 0.25s;
-    //
-    //     @if $iconColor == black {
-    //       @include asset__arrow(right, black,normal);
-    //     }
-    //
-    //   }
-    //
-    //   &:hover,
-    //   &:focus {
-    //
-    //     // pseudo for arrow
-    //     &::after {
-    //       transform:translateX(3px);
-    //     }
-    //   }
-    // }
   }
 
 }

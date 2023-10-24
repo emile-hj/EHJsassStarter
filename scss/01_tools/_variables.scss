@@ -61,7 +61,6 @@ $color__grey: #D9D9D9; // INITAL/UNSET
 
 
 
-
 /*	Colours - Generic values
     Use these values in styling!
 ***********************************  */
@@ -86,34 +85,19 @@ $color__default_pageOverlayBackground: $color__delta; // INITAL/UNSET
 
 
 
-
 /*	Size variables
 ***********************************  */
 $width__icon_button--mobile: 2rem; // INITAL/UNSET
 $width__icon_button--desktop: 2rem; // INITAL/UNSET
 
-// $width__large_button--desktop: 4.375rem; // INITAL/UNSET
-
-// $width__iconArrowLarge: 1.0625rem; // INITAL/UNSET
-
-// $width__field_body_max:645px; // INITAL/UNSET
-
-// $margin__list_bottom--mobile: 2rem; // INITAL/UNSET
-
 $borderWidth__standard:thin; // INITAL/UNSET
 
 $lineHeight__tag_normal: 1.2em; // INITAL/UNSET
 
-// $size__squareIcon--mobile: 3.125rem; // INITAL/UNSET
 
 
 /*	Transition variables
 ***********************************  */
-// $time__header_shrink_transition:0.25s; // INITAL/UNSET
-// debug $time__header_shrink_transition:6s; // INITAL/UNSET
-// $time__header_expand_transition:0.1s; // INITAL/UNSET
-// debug $time__header_expand_transition:6s; // INITAL/UNSET
-
 $ease__outSine:cubic-bezier(0.39, 0.575, 0.565, 1);
 $ease__easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
 
@@ -122,14 +106,7 @@ $slidingOverlayTransition: 0.3s $ease__outSine; // INITAL/UNSET
 $time__delay_step1:0.35s;
 $time__delay_step2:0.75s;
 
-// $time__hoverTransition--standard: 0.25s; // INITAL/UNSET
-// $time__hoverTransition--listedContentItem: $time__hoverTransition--standard; // INITAL/UNSET
-
-// $time__imageBackgroundOutlineRect__drawLine: 0.3s; // INITAL/UNSET
-
 $time__animateIntoViewport_standardElementAppear: 1s; // INITAL/UNSET
-// $time__animateIntoViewport_standardImageDelay: $time__imageBackgroundOutlineRect__drawLine*4; // INITAL/UNSET
-
 
 /*	Selector variables
 ***********************************  */

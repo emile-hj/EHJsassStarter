@@ -1,57 +1,22 @@
-
-.owl-stage {
- display:flex;
-
-  cursor:grab;
-
-  &:active {
-    cursor:grabbing;
-  }
-}
-
-.caroNav {
- display:flex;
+.tns-nav {
+  display:flex;
+  // justify-content: center;
+  
+  @include calcRemSize(20,gap);
 
   button {
-    @include display__block_hideText;
-
-    @include calcRemSize(34,width);
-    @include calcRemSize(34,height);
-
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    display:block;
+    @include calcRemSize(11,width);
+    aspect-ratio: 1 / 1;
+        
+    background-color: white;
 
     padding:0;
-
-    border:1px solid $color__defaultText;
+    border:0;
     border-radius: 50%;
-
-    margin:{
-      right:0.45em;
-    }
-
-    &:not(.disabled) {
-      &:hover,
-      &:focus {
-        background-color: $color__beta;
-      }
-    }
-
-    &:last-child {
-      margin-right:0;
-    }
-
-    &.disabled {
-      opacity:0.34;
-      cursor:default;
+    
+    &.tns-nav-active {
+      background-color:$color__defaultText;
     }
   }
-  .owl-prev {
-
-  }
-  .owl-next {
-
-  }
-
 }
