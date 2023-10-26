@@ -16,7 +16,7 @@
     border-radius: 50%;
     
     &.tns-nav-active {
-      background-color:$color__defaultText;
+      background-color:var(--defaultText);
     }
   }
 }

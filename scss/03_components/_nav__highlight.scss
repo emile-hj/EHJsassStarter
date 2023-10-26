@@ -33,13 +33,13 @@
       // }
     }
     a {
-      color:$color__beta;
+      color:var(--beta);
       display:block;
 
       &:hover,
       &:focus,
       &.menu-item--active-trail {
-        color:$color__alpha;
+        color:var(--alpha);
       }
     }
   }

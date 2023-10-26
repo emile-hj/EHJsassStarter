@@ -8,7 +8,7 @@
     @include typeStyle(heading,h4);
 
     a {
-      color:$color__defaultText;
+      color:var(--defaultText);
       display:block;
 
       // Pseudo for extend anchor area to cover whole block
@@ -33,7 +33,7 @@
   .teaser_text {
     p {
       @include typeStyle(body,small);
-      color:$color__black;
+      color:black;
       margin-bottom:1em;
     }
   }
@@ -75,7 +75,6 @@
     }
 
   }
-
 
   &.style__default {
     @include typeHierarchySizes(h4);

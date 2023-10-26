@@ -10,7 +10,7 @@ html {
 // set font basics
 body {
   @include typeStyle(body,normal);
-  color:$color__defaultText;
+  color:var(--defaultText);
 
   -webkit-font-smoothing:antialiased;
 }
@@ -24,9 +24,9 @@ body {
 a {
   &,
   &:link {
-    color:$color__defaultText;
+    color:var(--defaultText);
     text-decoration:underline;
-    text-decoration-color:$color__alpha;
+    text-decoration-color:var(--alpha);
     text-decoration-thickness:1px;
     text-underline-offset: 0.25em;
   }
@@ -59,8 +59,6 @@ h5 {
     @include typeStyle(body,large);
   }
 }
-
-
 
 .cta {
   @include button();

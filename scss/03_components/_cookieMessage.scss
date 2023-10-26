@@ -9,7 +9,7 @@
   z-index: 3;
 
   width:100%;
-  background-color:$color__beta;
+  background-color:var(--beta);
 
   .popup-content {
     width:auto;
@@ -74,7 +74,7 @@
 
     &:hover,
     &:focus {
-      color:$color__alpha;
+      color:var(--alpha);
       background-color:white;
     }
 

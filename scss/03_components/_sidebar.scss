@@ -9,13 +9,13 @@
 
     &,
     a {
-      color:$color__alpha;
+      color:var(--alpha);
     }
 
     a {
       &:hover,
       &:focus {
-        color:$color__beta;
+        color:var(--beta);
       }
     }
   }
@@ -39,7 +39,7 @@
     }
 
     a {
-      color:$color__defaultText;
+      color:var(--defaultText);
 
       width: calc(100% - 2em); // 100 minus .menu_control width
 
@@ -74,7 +74,7 @@
       &:hover,
       &:focus,
       &.menu-item--active-trail {
-        color:$color__beta;
+        color:var(--beta);
       }
     }
 
@@ -104,7 +104,7 @@
     padding:0;
 
     > li {
-      border-top:thin solid $color__grey;
+      border-top:thin solid black;
 
       > a {
         padding:{
@@ -117,7 +117,7 @@
     }
   }
   ul ul {
-    border-top:thin solid $color__grey;
+    border-top:thin solid black;
 
     li {
       padding:{

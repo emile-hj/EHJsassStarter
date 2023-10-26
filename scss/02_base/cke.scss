@@ -32,14 +32,11 @@
   a:not(.cta) {
     &,
     &:link {
-      color:$color__defaultText;
-      // font-weight:400;
-      border-bottom:0.125rem solid $color__beta;
+      color:var(--defaultText);
 
       &:hover,
       &:focus-visible {
-       color:$color__beta;
-       // border-color:white;
+       color:var(--beta);
       }
     }
   }
@@ -79,7 +76,7 @@
     }
 
     a {
-      color: $color__alpha;
+      color: var(--alpha);
       text-decoration: none;
       border-bottom:0;
     }
@@ -102,7 +99,7 @@
     }
 
     a {
-      color: $color__alpha;
+      color: var(--alpha);
       text-decoration: none;
       border-bottom:0;
     }
@@ -137,7 +134,7 @@
         top:0;
         left:0;
         padding: 0;
-        color:$color__charlie;
+        color:var(--charlie);
       }
       p {
         margin:0;
@@ -191,7 +188,7 @@
         @include display__block_hideText;
         width:0.6em;
         height:0.6em;
-        background-color:$color__beta;
+        background-color:var(--beta);
       }
     }
 
@@ -215,7 +212,7 @@
       // only ul li
       > li {
         &::before {
-          background-color:$color__charlie;
+          background-color:var(--charlie);
         }
       }
     }
@@ -316,7 +313,7 @@
       display:table-caption;
       caption-side: bottom;
       @include typeStyle(body,small);
-      color:$color__charlie;
+      color:var(--charlie);
       padding:{
         top:1.55em;
       }
@@ -398,7 +395,7 @@
 .field-name-body {
   hr {
     border:0;
-    border-bottom:thin solid $color__alpha;
+    border-bottom:thin solid var(--alpha);
     margin:{
       top:3rem;
       bottom:3rem;

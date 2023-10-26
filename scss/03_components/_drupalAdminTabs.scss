@@ -19,7 +19,7 @@
     padding: 0;
 
     border:{
-      bottom:1px solid $color__defaultText;
+      bottom:1px solid var(--defaultText);
     }
     margin:0;
 
@@ -34,7 +34,7 @@
     display:block;
 
     padding: 0.6em 1em;
-    border: 1px solid $color__defaultText;
+    border: 1px solid var(--defaultText);
     border-top-left-radius:5px;
     border-top-right-radius:5px;
 
@@ -46,7 +46,7 @@
     &.is-active,
     &:hover,
     &:focus-visible {
-      background-color: $color__alpha;
+      background-color: var(--alpha);
       // color:white;
     }
   }

@@ -15,22 +15,22 @@ form {
   input,
   textarea {
     &::-webkit-input-placeholder {
-      color:$color__defaultText;
+      color:var(--defaultText);
     }
 
     &::-moz-placeholder {
-      color:$color__defaultText;
+      color:var(--defaultText);
     }
 
     &:-moz-placeholder {
-      color:$color__defaultText;
+      color:var(--defaultText);
     }
 
     &:-ms-input-placeholder {
-      color:$color__defaultText;
+      color:var(--defaultText);
     }
     &::placeholder {
-      color:$color__defaultText;
+      color:var(--defaultText);
     }
   }
 
@@ -46,7 +46,7 @@ form {
     }
 
     background-color:transparent;
-    border:thin solid $color__alpha;
+    border:thin solid var(--alpha);
     -webkit-appearance:none;
     border-radius:0;
 

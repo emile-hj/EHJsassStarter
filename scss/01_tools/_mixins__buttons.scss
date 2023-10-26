@@ -31,11 +31,11 @@ $space__side_in_button_default:1.25em;
 @mixin button(
     $name:default,
     $textColor:white,
-    $bgColor:$color__defaultText,
-    $borderColor:$color__defaultText,
-    $textColor--hov:$color__defaultText,
-    $bgColor--hov:$color__alpha,
-    $borderColor--hov:$color__alpha,
+    $bgColor:var(--defaultText),
+    $borderColor:var(--defaultText),
+    $textColor--hov:var(--defaultText),
+    $bgColor--hov:var(--alpha),
+    $borderColor--hov:var(--alpha),
     $icon:null,
     $iconColor:null,
     $iconColor--hov:null

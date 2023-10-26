@@ -24,7 +24,6 @@ $grid_maxWidth: unquote( "#{$grid_totalWidth_fixed}#{$grid_sizingUnit}" ); // su
 $width__minSiteWidth_PX: 320px; // The minimum width of the site
 
 
-
 /* 	Fonts – Specfics
     These are not to be used directly in styling,
     please use the generic values further below!
@@ -39,50 +38,26 @@ $font__body: $font__helvetica; // INITAL/UNSET
 $font__heading: $font__helvetica; // INITAL/UNSET
 
 
-/*	Colours - Specifics
-    These are not to be used directly in styling,
-    please use the generic values further below!
-***********************************  */
-$color__black: #000000; // INITAL/UNSET
+:root {
+  /*	Colours - Specifics: Don't use directly
+  ***********************************  */
+  --pink: #FF557A;
+  --blue: #3a8dff;
+  --yellow: #ffbf00;
 
-$color__hotPink: #F42272; // INITAL/UNSET
-  $color__hotPink--interact:lighten($color__hotPink,40%); // INITAL/UNSET
-
-// $color__darkNavy: #102B50; // INITAL/UNSET
-
-$color__green:#4C8076; // INITAL/UNSET
-  $color__green--mid:#64BAAA; // INITAL/UNSET
-  $color__green--light:#C4FCF0; // INITAL/UNSET
-
-// $color__teal: #2DAAB1; // INITAL/UNSET
-
-$color__grey: #D9D9D9; // INITAL/UNSET
-  // $color__lightGrey: #EDEDED; // INITAL/UNSET
-
-
-
-/*	Colours - Generic values
-    Use these values in styling!
-***********************************  */
-$color__defaultText: $color__black; // INITAL/UNSET
-
-$color__alpha: $color__hotPink; // INITAL/UNSET
-  $color__alpha--semiTransInteract:rgba($color__alpha,0.2); // INITAL/UNSET
-
-$color__beta: $color__green; // INITAL/UNSET
-
-$color__charlie: $color__green--mid; // INITAL/UNSET
-
-$color__delta: $color__green--light; // INITAL/UNSET
-// $color__echo: $color__lightGrey; // INITAL/UNSET
-
-// Background colors
-// $color__bg_alpha: $color__delta; // INITAL/UNSET
-// $color__bg_beta: $color__delta; // INITAL/UNSET
-
-$color__default_pageOverlayBackground: $color__delta; // INITAL/UNSET
-
-
+  /*	Colours - Generics: Use these values in styling
+  ***********************************  */
+  --alpha: var(--pink); // INITAL/UNSET
+  --beta: var(--blue); // INITAL/UNSET
+  --charlie: var(--yellow); // INITAL/UNSET
+  
+  --pageBackground: white; // INITAL/UNSET
+  --defaultText: black; // INITAL/UNSET
+}
+// [data-theme="dark"] { 
+//   --pageBackground: black; // INITAL/UNSET
+//   --defaultText: white; // INITAL/UNSET
+// }
 
 
 /*	Size variables
@@ -95,7 +70,6 @@ $borderWidth__standard:thin; // INITAL/UNSET
 $lineHeight__tag_normal: 1.2em; // INITAL/UNSET
 
 
-
 /*	Transition variables
 ***********************************  */
 $ease__outSine:cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -103,8 +77,8 @@ $ease__easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
 
 $slidingOverlayTransition: 0.3s $ease__outSine; // INITAL/UNSET
 
-$time__delay_step1:0.35s;
-$time__delay_step2:0.75s;
+$time__delay_step1:0.35s; // INITAL/UNSET
+$time__delay_step2:0.75s; // INITAL/UNSET
 
 $time__animateIntoViewport_standardElementAppear: 1s; // INITAL/UNSET
 

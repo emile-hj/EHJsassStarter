@@ -24,7 +24,7 @@
     left:50%;
     @include calcRemSize(3, height);
     width: 80%;
-    background-color:$color__black;
+    background-color:black;
     transform-origin:50% 0%;
     transform: translate3d(-50%, -50%, 0) rotate(0deg);
 
@@ -58,7 +58,7 @@
   &:hover,
   &:focus {
     .line {
-      background-color:$color__alpha;
+      background-color:var(--alpha);
     }
   }
   &.state__open {
@@ -125,4 +125,13 @@ $space_side--desktop:2rem;
     }
   }
 
+}
+
+@mixin applySectionalColor($selector, $alpha) {
+
+  #{$selector} {
+    .colorBox {
+      background-color:$alpha;
+    }
+  }
 }
