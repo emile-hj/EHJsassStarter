@@ -135,3 +135,42 @@ $space_side--desktop:2rem;
     }
   }
 }
+
+@mixin webkitScrollbar(
+    $trackColor:rgba(255,255,255,1), 
+    $thumbColor:var(--alpha), 
+    $thumbHoverColor:var(--beta),
+    $trackRounded:true,
+    $handleRounded:true
+  ) {
+  overscroll-behavior: contain;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;          
+    
+    // @include max_624 {
+    //   width:11px;
+    // }
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background:$trackColor;
+
+    @if( $trackRounded ) {
+      border-radius:2em;
+    }
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $thumbColor;
+
+    @if( $handleRounded ) {
+      border-radius:2em;
+    }
+  }
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $thumbHoverColor;
+  }
+}
