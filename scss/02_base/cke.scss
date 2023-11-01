@@ -310,15 +310,17 @@
     }
 
     figcaption {
+      @include type_style__body_copy(small);
+
       display:table-caption;
       caption-side: bottom;
-      @include typeStyle(body,small);
-      color:var(--charlie);
-      padding:{
-        top:1.55em;
+
+      margin:{
+        top:1em;
       }
     }
   }
+
   .align-left,
   .align-right {
 
@@ -331,14 +333,14 @@
       margin:0;
     }
 
-    @include max_552 {
-      img {
-        margin: {
-          left: auto;
-          right: auto;
-        }
-      }
-    }
+    // @include max_552 {
+    //   img {
+    //     margin: {
+    //       left: auto;
+    //       right: auto;
+    //     }
+    //   }
+    // }
 
     @include min_552 {
       max-width:45%;
@@ -346,6 +348,7 @@
   }
 
   .align-left {
+
     @include min_552 {
       float: left;
       clear: left;
@@ -375,7 +378,6 @@
       }
     }
   }
-
 }
 
 .cke_editable {
@@ -402,6 +404,10 @@
     }
   }
 
+}
+
+.field--type-text-long {
+  @include clear_fix; // contain floated els
 }
 
 // Remove top margin from first body item
