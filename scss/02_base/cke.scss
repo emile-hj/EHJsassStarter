@@ -310,7 +310,7 @@
     }
 
     figcaption {
-      @include type_style__body_copy(small);
+      @include typeStyle(body,small);
 
       display:table-caption;
       caption-side: bottom;
@@ -407,7 +407,7 @@
 }
 
 .field--type-text-long {
-  @include clear_fix; // contain floated els
+  @include clearFix; // contain floated els
 }
 
 // Remove top margin from first body item

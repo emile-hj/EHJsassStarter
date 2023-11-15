@@ -367,15 +367,14 @@
 }
 .field--type-text-long figure figcaption,
 .cke_editable figure figcaption {
-  display: table-caption;
-  caption-side: bottom;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.470588em;
   font-size: clamp(1rem, 1.1813045711vw, 1.4375rem);
-  color: var(--charlie);
-  padding-top: 1.55em;
+  display: table-caption;
+  caption-side: bottom;
+  margin-top: 1em;
 }
 .field--type-text-long .align-left,
 .field--type-text-long .align-right,
@@ -389,15 +388,6 @@
 .cke_editable .align-left img,
 .cke_editable .align-right img {
   margin: 0;
-}
-@media only screen and (max-width: 551px) {
-  .field--type-text-long .align-left img,
-  .field--type-text-long .align-right img,
-  .cke_editable .align-left img,
-  .cke_editable .align-right img {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 @media only screen and (min-width: 552px) {
   .field--type-text-long .align-left,
@@ -446,6 +436,12 @@
   border-bottom: thin solid var(--alpha);
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.field--type-text-long::after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 .field--type-text-long > *:first-child {
