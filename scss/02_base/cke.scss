@@ -5,7 +5,7 @@
 
 // Lowest common denominator, all text formats have these styles
 .field--type-text-long,
-.cke_editable {
+.ck-content {
 
   /*	Paragraphs
   ************************************* */
@@ -46,7 +46,7 @@
 
 // More advanced text formats have these styles
 .field--type-text-long,
-.cke_editable {
+.ck-content {
 
   .cta_right {
     @include button();
@@ -380,7 +380,7 @@
   }
 }
 
-.cke_editable {
+.ck-content {
   strong {
     font-weight:700;
   }
