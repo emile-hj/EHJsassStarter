@@ -118,7 +118,11 @@
   }
 }
 
-
+@mixin asset__tick($color) {
+  @if $color == white {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 9.037 6.347'%3E%3Cpath d='M3.55 6.347 0 2.797l1.061-1.061 2.51 2.511L7.999 0l1.038 1.082L3.55 6.347z' data-name='Path 25' style='fill:%23fff;stroke-width:0'/%3E%3C/svg%3E");
+  }
+}
 
 
 

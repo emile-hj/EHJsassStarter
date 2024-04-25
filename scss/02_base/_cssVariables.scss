@@ -1,0 +1,30 @@
+
+
+:root {
+  /*	Colours - Specifics: Don't use directly (unless its grey or something neutral)
+  ***********************************  */
+  --pink: #FF557A; // INITAL/UNSET
+  --blue: #3a8dff; // INITAL/UNSET
+  --yellow: #ffbf00; // INITAL/UNSET
+
+
+  --grey:#6F6F6F; // INITAL/UNSET
+  --greyBorder:#E6E6E6; // INITAL/UNSET
+  --greyBg:#F5F5F5; // INITAL/UNSET
+  --greyDarkBg:#262626; // INITAL/UNSET
+
+
+  /*	Colours - Generics: Use these values in styling
+  ***********************************  */
+  --alpha: var(--pink); // INITAL/UNSET
+  --beta: var(--blue); // INITAL/UNSET
+  --charlie: var(--yellow); // INITAL/UNSET
+  
+  --pageBackground: white; // INITAL/UNSET
+  --defaultText: black;
+}
+
+// [data-theme="dark"] { 
+//   --pageBackground: black; // INITAL/UNSET
+//   --defaultText: white; // INITAL/UNSET
+// }

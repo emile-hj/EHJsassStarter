@@ -9,6 +9,54 @@
 }
 
 
+.paragraph--type--accordion {
+
+  border:{
+    top:1px solid var(--alpha);
+  }
+  margin:0;
+
+  .field--name-field-heading {
+    @include typeStyle(heading,h3);
+    margin:0;
+  }
+  .accordionBtn {
+    @include typeStyle(heading,h3);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+
+    background-color:transparent;
+    padding:{
+      left:0;
+      right:0;
+      top:0.5em;
+      bottom:0.5em;
+    }
+    border:0;
+    border-radius:0;
+    margin:0;
+
+    &::after {
+      content:"+";
+      display:block;
+    }
+
+    &[data-state="open"] {
+      &::after {
+        content:"-";
+      }
+    }
+
+  }
+  .field--name-field-text {
+    padding:{
+      bottom:1em;
+    }
+  }
+}
+
 // remove margin top from first paragraph in content
 .field--name-field-content {
   .field__item:first-child {

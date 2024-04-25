@@ -8,11 +8,11 @@ $grid_sizingUnit:rem;
 $grid_columnCount: 12;
 
 // Set the pixel width of columns
-$grid_columnWidth_fixed: 70; // SET THIS UNIT in px
+$grid_columnWidth_fixed: 75; // SET THIS UNIT in px
 $grid_columnWidth_fixed: math.div($grid_columnWidth_fixed, 16); // converted to rem
 
 // Set the pixel width of gutters
-$grid_gutterWidth_fixed: 30; // SET THIS UNIT in px
+$grid_gutterWidth_fixed: 35; // SET THIS UNIT in px
 $grid_gutterWidth_fixed: math.div($grid_gutterWidth_fixed, 16); // converted to rem
 $grid_gutterWidth_rem: #{$grid_gutterWidth_fixed}rem;
 
@@ -38,26 +38,7 @@ $font__body: $font__helvetica; // INITAL/UNSET
 $font__heading: $font__helvetica; // INITAL/UNSET
 
 
-:root {
-  /*	Colours - Specifics: Don't use directly
-  ***********************************  */
-  --pink: #FF557A;
-  --blue: #3a8dff;
-  --yellow: #ffbf00;
 
-  /*	Colours - Generics: Use these values in styling
-  ***********************************  */
-  --alpha: var(--pink); // INITAL/UNSET
-  --beta: var(--blue); // INITAL/UNSET
-  --charlie: var(--yellow); // INITAL/UNSET
-  
-  --pageBackground: white; // INITAL/UNSET
-  --defaultText: black; // INITAL/UNSET
-}
-// [data-theme="dark"] { 
-//   --pageBackground: black; // INITAL/UNSET
-//   --defaultText: white; // INITAL/UNSET
-// }
 
 
 /*	Size variables

@@ -126,7 +126,7 @@
       list-style-image: none;
       position:relative;
       // margin-bottom: 0.5em;
-      padding-left:31px;
+      padding-left:1.25em;
 
       // Psuedo for bullets and numbering
       &::before {
@@ -134,7 +134,7 @@
         top:0;
         left:0;
         padding: 0;
-        color:var(--charlie);
+        color:var(--alpha);
       }
       p {
         margin:0;
@@ -183,12 +183,14 @@
     > li {
       &::before {
         content:"–";
-        top:0;
+        top:0.65em;
         left: 0;
         @include display__block_hideText;
-        width:0.6em;
-        height:0.6em;
-        background-color:var(--beta);
+        width:6px;
+        height:6px;
+        background-color:var(--alpha);
+        border-radius: 50%;
+        box-sizing: border-box;
       }
     }
 
@@ -212,7 +214,8 @@
       // only ul li
       > li {
         &::before {
-          background-color:var(--charlie);
+          background-color:transparent;
+          border:1px solid var(--defaultText);
         }
       }
     }
@@ -227,7 +230,10 @@
     > li {
       &::before {
         counter-increment: item;
-        content: counter(item);
+        content: counter(item)".";
+
+        font-size:0.82em;
+        font-weight:600;
       }
     }
 

@@ -26,9 +26,21 @@ a {
   &:link {
     color:var(--defaultText);
     text-decoration:underline;
-    text-decoration-color:var(--alpha);
+    text-decoration-color:var(--default);
     text-decoration-thickness:1px;
     text-underline-offset: 0.25em;
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-color:var(--alpha);
+  }
+
+  .toolbar & {
+    &,
+    &:link {
+      text-decoration:none;
+    }
   }
 }
 
@@ -54,12 +66,21 @@ h5 {
   @include typeStyle(heading,h5);
 }
 
-.field--name-field-introduction {
-  p {
-    @include typeStyle(body,large);
-  }
+button {
+  color:var(--default);
 }
 
 .cta {
   @include button();
 }
+
+
+.field--name-body {
+  margin:{
+    bottom:3em;
+  }
+  p {
+    @include typeStyle(body,large);
+  }
+}
+

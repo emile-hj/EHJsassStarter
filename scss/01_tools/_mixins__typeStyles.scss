@@ -8,80 +8,79 @@
 @mixin typeHierarchySizes($name) {
   @if $name == bodyNormal {
     @include clamp(
-      font-size, 18, 25, 1704 // INITAL/UNSET
+      font-size, 18, 21, 912 // INITAL/UNSET
     );
+
+    @include in_print {
+      font-size:10pt;
+    }
   }
   @else if $name == bodySmall {
     @include clamp(
-      font-size, 16, 23, 1947 // INITAL/UNSET
+      font-size, 16, 18, 624 // INITAL/UNSET
     );
   }
   @else if $name == bodyExtraSmall {
     @include clamp(
-      font-size, 14, 21, 2016 // INITAL/UNSET
+      font-size, 14, 16, 480 // INITAL/UNSET
     );
   }
   @else if $name == bodyLarge {
     @include clamp(
-      font-size, 19, 28, 1632 // INITAL/UNSET
+      font-size, 21, 25, 1400 // INITAL/UNSET
     );
   }
 
-  @else if $name == h0 {
-    @include clamp(
-      font-size, 46, 120, 1920 // INITAL/UNSET
-    );
-  }
   @else if $name == h1 {
     @include clamp( 
-      font-size, 41, 90, 1848 // INITAL/UNSET
+      font-size, 33, 47, 1400 // INITAL/UNSET
     );
   }
   @else if $name == h2 {
     @include clamp(
-      font-size, 34, 64, 1705 // INITAL/UNSET
+      font-size, 28, 40, 1050 // INITAL/UNSET
     );
   }
   @else if $name == h3 {
     @include clamp(
-      font-size, 26, 50, 1800 // INITAL/UNSET
+      font-size, 25, 32, 912 // INITAL/UNSET
     );
   }
   @else if $name == h4 {
     @include clamp(
-      font-size, 22, 40, 1920 // INITAL/UNSET
+      font-size, 22, 25, 912 // INITAL/UNSET
     );
   }
   @else if $name == h5 {
     @include clamp( 
-      font-size, 19, 32, 1776 // INITAL/UNSET
+      font-size, 19, 22, 912 // INITAL/UNSET
     );
   }
   @else if $name == h6 {
     @include clamp(
-      font-size, 18, 25, 1704 // INITAL/UNSET
+      font-size, 16, 18, 840 // INITAL/UNSET
     );
   }
 
   @else if $name == buttonPrimary {
     @include clamp(
-      font-size, 16, 22, 1760 // INITAL/UNSET
+      font-size, 14, 16, 1400 // INITAL/UNSET
     );
   }
   @else if $name == buttonSecondary {
     @include clamp(
-      font-size, 16, 21, 1776 // INITAL/UNSET
+      font-size, 13, 14, 1776// INITAL/UNSET
     );
   }
 
-  @else if $name == menu_normal {
-    @include typeHierarchySizes(bodySmall); // INITAL/UNSET
+  @else if $name == menuLevel1 {
+    @include calcRemSize(18);  // INITAL/UNSET
   }
 
 
   @else if $name == tagNormal {
     @include clamp(
-      font-size, 14, 21, 2015 // INITAL/UNSET
+      font-size, 14, 16, 700// INITAL/UNSET
     );
 
   }
@@ -102,41 +101,28 @@
 
     // Important: This style is the basis for the site, applied to the body
     @if $name == normal {
-      line-height:1.5238em; // INITAL/UNSET
+      line-height:1.45em; // INITAL/UNSET
       @include typeHierarchySizes(bodyNormal); // INITAL/UNSET
     }
     @else if $name == small {
-      line-height:1.470588em;
+      line-height:1.45em;
       @include typeHierarchySizes(bodySmall); // INITAL/UNSET
     }
     @else if $name == extraSmall {
-      line-height:1.47em; // INITAL/UNSET
+      line-height:1.45em; // INITAL/UNSET
       @include typeHierarchySizes(bodyExtraSmall); // INITAL/UNSET
     }
     @else if $name == large {
-      line-height:1.48em; // INITAL/UNSET
+      line-height:1.45em; // INITAL/UNSET
       @include typeHierarchySizes(bodyLarge); // INITAL/UNSET
     }
   }
 
   @else if $category == heading {
-    @if $name == h0 {
+    @if $name == h1 {
       font-family:$font__heading;
       font-weight:700; // INITAL/UNSET
       line-height:1.05em; // INITAL/UNSET
-      letter-spacing:0; // INITAL/UNSET
-
-      @include typeHierarchySizes(h0); // INITAL/UNSET
-
-      margin:{
-        top:0; // INITAL/UNSET
-        bottom:0.525em; // INITAL/UNSET
-      }
-    }
-    @else if $name == h1 {
-      font-family:$font__heading;
-      font-weight:700; // INITAL/UNSET
-      line-height:1.028571em; // INITAL/UNSET
       letter-spacing:0; // INITAL/UNSET
 
       @include typeHierarchySizes(h1); // INITAL/UNSET
@@ -149,7 +135,7 @@
     @else if $name == h2 {
       font-family:$font__heading;
       font-weight:700; // INITAL/UNSET
-      line-height:1.111111em; // INITAL/UNSET
+      line-height:1.15em; // INITAL/UNSET
       letter-spacing:0; // INITAL/UNSET
 
       @include typeHierarchySizes(h2); // INITAL/UNSET
@@ -175,7 +161,7 @@
     @else if $name == h4 {
       font-family:$font__heading;
       font-weight:700; // INITAL/UNSET
-      line-height:1.266667em; // INITAL/UNSET
+      line-height:1.25em; // INITAL/UNSET
       letter-spacing:0; // INITAL/UNSET
 
       @include typeHierarchySizes(h4); // INITAL/UNSET
@@ -200,7 +186,7 @@
     }
     @else if $name == h6 {
       font-family:$font__body;
-      font-weight:600; // INITAL/UNSET
+      font-weight:700; // INITAL/UNSET
       line-height:1.45em; // INITAL/UNSET
       letter-spacing:0; // INITAL/UNSET
 
@@ -214,13 +200,13 @@
   }
 
   @else if $category == menu {
-    @if $name == normal {
+    @if $name == level1 {
       font-family:$font__heading; // INITAL/UNSET
       font-weight:700; // INITAL/UNSET
       line-height:1.25em; // INITAL/UNSET
       letter-spacing:0; // INITAL/UNSET
 
-      @include typeHierarchySizes(menu_normal); // INITAL/UNSET
+      @include typeHierarchySizes(menuLevel1); // INITAL/UNSET
     }
   }
 

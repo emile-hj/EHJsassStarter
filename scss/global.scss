@@ -6,6 +6,7 @@
 
 
 // Import sitewide base
+@import './02_base/cssVariables';
 @import './02_base/normalize';
 @import './02_base/webfonts'; // if the project requires webfonts, place @font-face rules here
 @import './02_base/layouts';
@@ -25,7 +26,7 @@
 @import './03_components/footer';
 @import './03_components/sidebar';
 // @import './03_components/carousel';
-// @import './03_components/paragraph';
+@import './03_components/paragraph';
 @import './03_components/pagination';
 // @import './03_components/socialLinks';
 

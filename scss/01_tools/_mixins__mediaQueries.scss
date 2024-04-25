@@ -560,12 +560,12 @@ $mq_336  : 336px;
 }
 
 // The following are for described purposes, using the same MQs from above
-@mixin mq_breakpoint__sidebar_and_content_sidebyside {
+@mixin mq__sidebarAndContentSidebyside {
   @media only screen and (min-width : $mq_912) {
     @content;
   }
 }
-@mixin mq_breakpoint__sidebar_and_content_stacked {
+@mixin mq__sidebarAndContentStacked {
   @media only screen and (max-width : $mq_912 - 1) {
     @content;
   }

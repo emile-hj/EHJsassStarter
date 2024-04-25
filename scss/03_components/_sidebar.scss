@@ -4,31 +4,17 @@
 *********************************** */
 .sidebar {
 
-  h2 {
+  nav h2 {
     @include typeStyle(heading,h4);
-
-    &,
-    a {
-      color:var(--alpha);
-    }
-
-    a {
-      &:hover,
-      &:focus {
-        color:var(--beta);
-      }
-    }
   }
 
-  ul {
+  .menu {
     @include typeStyle(body,small);
 
     list-style:none;
 
     width:100%;
-    padding:{
-      left:2em;
-    }
+    
     margin:0;
 
 
@@ -72,7 +58,7 @@
       // }
 
       &:hover,
-      &:focus,
+      &:focus-visible,
       &.menu-item--active-trail {
         color:var(--beta);
       }
@@ -97,10 +83,28 @@
         transform:rotate(180deg);
       }
     }
+
+    .menu {
+      padding:{
+        left:2em;
+      }
+      
+      border-top:thin solid black;
+  
+      li {
+        padding:{
+          right:0.5em;
+        }
+      }
+
+      .menu {
+        border-top:0;
+      }
+    }
   }
 
   // Level 1 only
-  > ul {
+  > .menu {
     padding:0;
 
     > li {
@@ -116,26 +120,6 @@
       }
     }
   }
-  ul ul {
-    border-top:thin solid black;
-
-    li {
-      padding:{
-        right:0.5em;
-      }
-    }
-  }
-  ul ul ul {
-    border-top:0;
-  }
-
-  .block {
-    @include typeHierarchySizes(h2);
-    margin:{
-      bottom:2em;
-    }
-  }
-
 
 
 }
