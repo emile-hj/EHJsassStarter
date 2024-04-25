@@ -84,3 +84,10 @@ button {
   }
 }
 
+.field--name-field-caption {
+  @include typeStyle(body,small);
+  margin:{
+    top:0.5em;
+  }
+}
+

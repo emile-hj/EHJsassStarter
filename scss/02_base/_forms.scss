@@ -78,6 +78,121 @@ form {
     border:0;
   }
 
+  .form-checkboxes {
+    list-style:none;
+
+    label {
+      @include typeStyle(menu,selectList);
+    }
+
+    .form-item {
+      position:relative;
+
+      margin:{
+        bottom:0.75em;
+      }
+  
+      input[type="checkbox"] {
+        position:absolute;
+        top:0;
+        left:0;
+  
+        opacity:0;  
+      }
+
+      label {
+        padding:{
+          left:1.5em;
+        }
+  
+        cursor:pointer;
+  
+        // Pseudo for styled check
+        &::before {
+          content:" ";
+          display:block;
+          position: absolute;
+          top: 53%;
+          left: 0;
+  
+          width:0.89em;
+          height:0.89em;
+
+          @include asset__tick(white);
+          background-repeat: no-repeat;
+          background-size:62% auto;
+          background-position:52% 56%;
+
+          border:thin solid var(--defaultText);
+  
+          border-radius:0.294118em;
+  
+          transform: translateY(-50%);
+        }
+  
+        &:hover {
+          // color:$color__charlie;
+          color:var(--alpha);
+        }
+      }
+  
+      input:checked + label {
+        // Pseudo for styled check
+        &::before {
+          background-color:var(--alpha);
+          border-color:var(--alpha);
+        }
+      }
+  
+      input:focus + label {
+        color:var(--alpha);
+      }
+    }
+
+
+    ul {
+      list-style: none;
+
+      padding:0;
+      margin:0;
+    }
+    li {  
+
+      &:last-child {
+        .form-item {
+          margin-bottom:0;
+        }
+      }
+
+      &.has_children {
+        label {
+          // pseudo to show has children
+          &::after {
+            content:" (+)";
+          }
+        }
+
+        ul {
+          display:none;
+        }
+
+        &.active-children {
+          label {
+            // hide pseudo when already 'expanded'
+            &::after {
+              content:none;
+            }
+          }
+
+          ul {
+            display:block;
+          }
+        }
+      }
+
+    }
+  }
+
   input[type="submit"] {
     @include button();
   }
