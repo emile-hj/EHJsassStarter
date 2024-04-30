@@ -1,15 +1,13 @@
 
 /* 	Forms
 *********************************** */
-$selector__form_text_inputs: 'input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="phone"], input[type="number"], .form-text, textarea';
+$selector__formTextInputs: 'input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="phone"], input[type="number"], .form-text, textarea';
 
 form {
 
   label {
     @include typeStyle(heading,h4);
-    margin:{
-      bottom:0.75em;
-    }
+    display:block;
   }
 
   input,
@@ -34,7 +32,7 @@ form {
     }
   }
 
-  #{$selector__form_text_inputs} {
+  #{$selector__formTextInputs} {
     @include typeStyle(body,normal);
 
     width:100%;

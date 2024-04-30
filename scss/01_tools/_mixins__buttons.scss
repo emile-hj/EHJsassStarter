@@ -64,7 +64,7 @@ $space__side_in_button_default:1.25em;
   }
 
   @if $name == default {
-    @include typeStyle(button,default);
+    @include typeStyle(button,primary);
 
     // position:relative; // contain pos abs child
 

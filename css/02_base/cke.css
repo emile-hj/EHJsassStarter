@@ -9,21 +9,6 @@
 /* 	Fonts – Generic values
     Use these values in styling!
 *********************************** */
-:root {
-  /*	Colours - Specifics: Don't use directly
-  ***********************************  */
-  --pink: #FF557A;
-  --blue: #3a8dff;
-  --yellow: #ffbf00;
-  /*	Colours - Generics: Use these values in styling
-  ***********************************  */
-  --alpha: var(--pink);
-  --beta: var(--blue);
-  --charlie: var(--yellow);
-  --pageBackground: white;
-  --defaultText: black;
-}
-
 /*	Size variables
 ***********************************  */
 /*	Transition variables
@@ -55,54 +40,62 @@
 /*  Animate Into Viewport effects
 *********************************** */
 .field--type-text-long,
-.cke_editable {
+.ck-content {
   /*	Paragraphs
   ************************************* */
 }
 .field--type-text-long p,
 .field--type-text-long li,
-.cke_editable p,
-.cke_editable li {
+.ck-content p,
+.ck-content li {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.5238em;
-  font-size: clamp(1.125rem, 1.4671361502vw, 1.5625rem);
+  line-height: 1.45em;
+  font-size: clamp(1.125rem, 2.3026315789vw, 1.3125rem);
   margin-bottom: 1.45em;
+}
+@media print {
+  .field--type-text-long p,
+  .field--type-text-long li,
+  .ck-content p,
+  .ck-content li {
+    font-size: 10pt;
+  }
 }
 .field--type-text-long p em,
 .field--type-text-long li em,
-.cke_editable p em,
-.cke_editable li em {
+.ck-content p em,
+.ck-content li em {
   font-style: italic;
 }
 .field--type-text-long p u,
 .field--type-text-long li u,
-.cke_editable p u,
-.cke_editable li u {
+.ck-content p u,
+.ck-content li u {
   text-decoration: underline;
 }
 .field--type-text-long p strong,
 .field--type-text-long li strong,
-.cke_editable p strong,
-.cke_editable li strong {
+.ck-content p strong,
+.ck-content li strong {
   font-weight: 700;
 }
 .field--type-text-long a:not(.cta), .field--type-text-long a:not(.cta):link,
-.cke_editable a:not(.cta),
-.cke_editable a:not(.cta):link {
+.ck-content a:not(.cta),
+.ck-content a:not(.cta):link {
   color: var(--defaultText);
 }
 .field--type-text-long a:not(.cta):hover, .field--type-text-long a:not(.cta):focus-visible, .field--type-text-long a:not(.cta):link:hover, .field--type-text-long a:not(.cta):link:focus-visible,
-.cke_editable a:not(.cta):hover,
-.cke_editable a:not(.cta):focus-visible,
-.cke_editable a:not(.cta):link:hover,
-.cke_editable a:not(.cta):link:focus-visible {
+.ck-content a:not(.cta):hover,
+.ck-content a:not(.cta):focus-visible,
+.ck-content a:not(.cta):link:hover,
+.ck-content a:not(.cta):link:focus-visible {
   color: var(--beta);
 }
 
 .field--type-text-long,
-.cke_editable {
+.ck-content {
   /*  Headings
   ************************************* */
   /*  Lists
@@ -111,13 +104,14 @@
   ************************************* */
 }
 .field--type-text-long .cta_right,
-.cke_editable .cta_right {
+.ck-content .cta_right {
   display: inline-block;
   cursor: pointer;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
   line-height: 1.2em;
   letter-spacing: 0;
+  font-size: clamp(0.875rem, 1.1428571429vw, 1rem);
   padding-top: 0.9em;
   padding-bottom: 0.85em;
   padding-left: 1.25em;
@@ -125,210 +119,213 @@
   border: thin solid var(--defaultText);
 }
 .field--type-text-long .cta_right, .field--type-text-long .cta_right:link,
-.cke_editable .cta_right,
-.cke_editable .cta_right:link {
+.ck-content .cta_right,
+.ck-content .cta_right:link {
   color: white;
   background: none;
   background-color: var(--defaultText);
 }
 .field--type-text-long .cta_right:hover, .field--type-text-long .cta_right:focus-visible,
-.cke_editable .cta_right:hover,
-.cke_editable .cta_right:focus-visible {
+.ck-content .cta_right:hover,
+.ck-content .cta_right:focus-visible {
   color: var(--defaultText);
   background-color: var(--alpha);
   border-color: var(--alpha);
 }
 .field--type-text-long .cta_right:hover, .field--type-text-long .cta_right:focus-visible,
-.cke_editable .cta_right:hover,
-.cke_editable .cta_right:focus-visible {
+.ck-content .cta_right:hover,
+.ck-content .cta_right:focus-visible {
   color: var(--defaultText);
   background-color: var(--alpha);
 }
 .field--type-text-long h2,
-.cke_editable h2 {
+.ck-content h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.15em;
+  letter-spacing: 0;
+  font-size: clamp(1.75rem, 3.8095238095vw, 2.5rem);
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+.field--type-text-long h2 em,
+.ck-content h2 em {
+  font-style: normal;
+}
+.field--type-text-long h2 u,
+.ck-content h2 u {
+  text-decoration: none;
+}
+.field--type-text-long h2 a,
+.ck-content h2 a {
+  color: var(--alpha);
+  text-decoration: none;
+  border-bottom: 0;
+}
+.field--type-text-long h3,
+.ck-content h3 {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2em;
   letter-spacing: 0;
-  font-size: clamp(1.625rem, 2.7777777778vw, 3.125rem);
+  font-size: clamp(1.5625rem, 3.5087719298vw, 2rem);
   margin-top: 0;
   margin-bottom: 0.65em;
-  margin-top: 1.7em;
-  margin-bottom: 1.25em;
-}
-.field--type-text-long h2 em,
-.cke_editable h2 em {
-  font-style: normal;
-}
-.field--type-text-long h2 u,
-.cke_editable h2 u {
-  text-decoration: none;
-}
-.field--type-text-long h2 a,
-.cke_editable h2 a {
-  color: var(--alpha);
-  text-decoration: none;
-  border-bottom: 0;
-}
-.field--type-text-long h2 strong,
-.cke_editable h2 strong {
-  font-weight: 500;
-}
-.field--type-text-long h3,
-.cke_editable h3 {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.266667em;
-  letter-spacing: 0;
-  font-size: clamp(1.375rem, 2.0833333333vw, 2.5rem);
-  margin-top: 0;
-  margin-bottom: 0.4em;
 }
 .field--type-text-long h3 em,
-.cke_editable h3 em {
+.ck-content h3 em {
   font-style: normal;
 }
 .field--type-text-long h3 u,
-.cke_editable h3 u {
+.ck-content h3 u {
   text-decoration: none;
 }
 .field--type-text-long h3 a,
-.cke_editable h3 a {
+.ck-content h3 a {
   color: var(--alpha);
   text-decoration: none;
   border-bottom: 0;
 }
-.field--type-text-long h3 strong,
-.cke_editable h3 strong {
-  font-weight: 500;
-}
 .field--type-text-long ul,
 .field--type-text-long ol,
-.cke_editable ul,
-.cke_editable ol {
-  font-size: clamp(1.125rem, 1.4671361502vw, 1.5625rem);
+.ck-content ul,
+.ck-content ol {
+  font-size: clamp(1.125rem, 2.3026315789vw, 1.3125rem);
   margin: 0 0 1.5em 0;
   padding: 0;
   clear: both;
   display: block;
 }
+@media print {
+  .field--type-text-long ul,
+  .field--type-text-long ol,
+  .ck-content ul,
+  .ck-content ol {
+    font-size: 10pt;
+  }
+}
 .field--type-text-long ul li,
 .field--type-text-long ol li,
-.cke_editable ul li,
-.cke_editable ol li {
+.ck-content ul li,
+.ck-content ol li {
   position: relative;
   list-style-type: none;
   list-style-image: none;
   position: relative;
-  padding-left: 31px;
+  padding-left: 1.25em;
 }
 .field--type-text-long ul li::before,
 .field--type-text-long ol li::before,
-.cke_editable ul li::before,
-.cke_editable ol li::before {
+.ck-content ul li::before,
+.ck-content ol li::before {
   position: absolute;
   top: 0;
   left: 0;
   padding: 0;
-  color: var(--charlie);
+  color: var(--alpha);
 }
 .field--type-text-long ul li p,
 .field--type-text-long ol li p,
-.cke_editable ul li p,
-.cke_editable ol li p {
+.ck-content ul li p,
+.ck-content ol li p {
   margin: 0;
 }
 .field--type-text-long ul li ul,
 .field--type-text-long ul li ol,
 .field--type-text-long ol li ul,
 .field--type-text-long ol li ol,
-.cke_editable ul li ul,
-.cke_editable ul li ol,
-.cke_editable ol li ul,
-.cke_editable ol li ol {
+.ck-content ul li ul,
+.ck-content ul li ol,
+.ck-content ol li ul,
+.ck-content ol li ol {
   margin-top: 0.5em;
 }
 .field--type-text-long ul .cta,
 .field--type-text-long ol .cta,
-.cke_editable ul .cta,
-.cke_editable ol .cta {
+.ck-content ul .cta,
+.ck-content ol .cta {
   padding: 0;
   border: 0;
 }
 .field--type-text-long ul .cta::before, .field--type-text-long ul .cta::after,
 .field--type-text-long ol .cta::before,
 .field--type-text-long ol .cta::after,
-.cke_editable ul .cta::before,
-.cke_editable ul .cta::after,
-.cke_editable ol .cta::before,
-.cke_editable ol .cta::after {
+.ck-content ul .cta::before,
+.ck-content ul .cta::after,
+.ck-content ol .cta::before,
+.ck-content ol .cta::after {
   content: none;
 }
 .field--type-text-long ul .cta:hover, .field--type-text-long ul .cta:focus,
 .field--type-text-long ol .cta:hover,
 .field--type-text-long ol .cta:focus,
-.cke_editable ul .cta:hover,
-.cke_editable ul .cta:focus,
-.cke_editable ol .cta:hover,
-.cke_editable ol .cta:focus {
+.ck-content ul .cta:hover,
+.ck-content ul .cta:focus,
+.ck-content ol .cta:hover,
+.ck-content ol .cta:focus {
   background-color: transparent !important;
 }
 .field--type-text-long ul,
-.cke_editable ul {
+.ck-content ul {
   list-style-type: none;
 }
 .field--type-text-long ul li::before,
-.cke_editable ul li::before {
+.ck-content ul li::before {
   content: "–";
 }
 .field--type-text-long ul > li::before,
-.cke_editable ul > li::before {
+.ck-content ul > li::before {
   content: "–";
-  top: 0;
+  top: 0.65em;
   left: 0;
   display: block;
   overflow: hidden;
   text-align: left;
   text-indent: -9999px;
-  width: 0.6em;
-  height: 0.6em;
-  background-color: var(--beta);
+  width: 6px;
+  height: 6px;
+  background-color: var(--alpha);
+  border-radius: 50%;
+  box-sizing: border-box;
 }
 .field--type-text-long ul ul,
 .field--type-text-long ul ol,
-.cke_editable ul ul,
-.cke_editable ul ol {
+.ck-content ul ul,
+.ck-content ul ol {
   margin-bottom: 0;
 }
 .field--type-text-long ul ul > li::before,
-.cke_editable ul ul > li::before {
-  background-color: var(--charlie);
+.ck-content ul ul > li::before {
+  background-color: transparent;
+  border: 1px solid var(--defaultText);
 }
 .field--type-text-long ol,
-.cke_editable ol {
+.ck-content ol {
   counter-reset: item;
 }
 .field--type-text-long ol > li::before,
-.cke_editable ol > li::before {
+.ck-content ol > li::before {
   counter-increment: item;
-  content: counter(item);
+  content: counter(item) ".";
+  font-size: 0.82em;
+  font-weight: 600;
 }
 .field--type-text-long ol li ul,
 .field--type-text-long ol li ol,
-.cke_editable ol li ul,
-.cke_editable ol li ol {
+.ck-content ol li ul,
+.ck-content ol li ol {
   margin-bottom: 0;
 }
 .field--type-text-long ol li ul li li::before,
 .field--type-text-long ol li ol li li::before,
-.cke_editable ol li ul li li::before,
-.cke_editable ol li ol li li::before {
+.ck-content ol li ul li li::before,
+.ck-content ol li ol li li::before {
   content: "•";
 }
 .field--type-text-long img,
 .field--type-text-long figure,
-.cke_editable img,
-.cke_editable figure {
+.ck-content img,
+.ck-content figure {
   display: block;
   max-width: 100%;
   height: auto;
@@ -336,70 +333,70 @@
   margin-bottom: 3rem;
 }
 .field--type-text-long img,
-.cke_editable img {
+.ck-content img {
   display: block;
 }
 .field--type-text-long figure,
-.cke_editable figure {
+.ck-content figure {
   display: table;
   margin-left: 0;
   margin-right: 0;
 }
 .field--type-text-long figure > *,
-.cke_editable figure > * {
+.ck-content figure > * {
   display: table-row;
 }
 .field--type-text-long figure br,
-.cke_editable figure br {
+.ck-content figure br {
   display: none;
 }
 .field--type-text-long figure,
 .field--type-text-long figure img,
-.cke_editable figure,
-.cke_editable figure img {
+.ck-content figure,
+.ck-content figure img {
   max-width: 100%;
   height: auto;
 }
 .field--type-text-long figure img,
-.cke_editable figure img {
+.ck-content figure img {
   margin: 0;
   z-index: 1;
 }
 .field--type-text-long figure figcaption,
-.cke_editable figure figcaption {
+.ck-content figure figcaption {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.470588em;
-  font-size: clamp(1rem, 1.1813045711vw, 1.4375rem);
+  line-height: 1.45em;
+  font-size: clamp(1rem, 2.8846153846vw, 1.125rem);
   display: table-caption;
   caption-side: bottom;
   margin-top: 1em;
 }
 .field--type-text-long .align-left,
 .field--type-text-long .align-right,
-.cke_editable .align-left,
-.cke_editable .align-right {
+.ck-content .align-left,
+.ck-content .align-right {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 .field--type-text-long .align-left img,
 .field--type-text-long .align-right img,
-.cke_editable .align-left img,
-.cke_editable .align-right img {
+.ck-content .align-left img,
+.ck-content .align-right img {
   margin: 0;
 }
 @media only screen and (min-width: 552px) {
   .field--type-text-long .align-left,
   .field--type-text-long .align-right,
-  .cke_editable .align-left,
-  .cke_editable .align-right {
+  .ck-content .align-left,
+  .ck-content .align-right {
     max-width: 45%;
   }
 }
 @media only screen and (min-width: 552px) {
   .field--type-text-long .align-left,
-  .cke_editable .align-left {
+  .ck-content .align-left {
     float: left;
     clear: left;
     margin-right: 2.5rem;
@@ -407,7 +404,7 @@
 }
 @media only screen and (min-width: 552px) {
   .field--type-text-long .align-right,
-  .cke_editable .align-right {
+  .ck-content .align-right {
     float: right;
     clear: right;
     margin-left: 2.5rem;
@@ -415,13 +412,13 @@
 }
 .field--type-text-long .align-center,
 .field--type-text-long .align-center img,
-.cke_editable .align-center,
-.cke_editable .align-center img {
+.ck-content .align-center,
+.ck-content .align-center img {
   margin-left: auto;
   margin-right: auto;
 }
 
-.cke_editable strong {
+.ck-content strong {
   font-weight: 700;
 }
 
