@@ -2165,6 +2165,37 @@ nav.pager li {
 nav.pager li:last-child {
   margin-right: 0;
 }
+.the-page .field--name-field-media-oembed-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.the-page .field--name-field-media-oembed-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+@media print {
+  .the-page .field--name-field-media-oembed-video {
+    display: none;
+  }
+}
+.the-page figure:has(iframe),
+.the-page .align-left:has(iframe),
+.the-page .align-right:has(iframe),
+.the-page .align-center:has(iframe) {
+  width: 100%;
+}
+.the-page figure .field--name-field-media-oembed-video,
+.the-page .align-left .field--name-field-media-oembed-video,
+.the-page .align-right .field--name-field-media-oembed-video {
+  margin: 0;
+}
+
 #sliding-popup {
   padding-top: 1em;
   padding-bottom: 1.25em;
