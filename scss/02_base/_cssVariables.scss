@@ -3,28 +3,28 @@
 :root {
   /*	Colours - Specifics: Don't use directly (unless its grey or something neutral)
   ***********************************  */
-  --pink: #FF557A; // INITAL/UNSET
-  --blue: #3a8dff; // INITAL/UNSET
-  --yellow: #ffbf00; // INITAL/UNSET
+  --color__pink: #FF557A; // INITAL/UNSET
+  --color__blue: #3a8dff; // INITAL/UNSET
+  --color__yellow: #ffbf00; // INITAL/UNSET
 
 
-  --grey:#6F6F6F; // INITAL/UNSET
-  --greyBorder:#E6E6E6; // INITAL/UNSET
-  --greyBg:#F5F5F5; // INITAL/UNSET
-  --greyDarkBg:#262626; // INITAL/UNSET
+  --color__grey:#6F6F6F; // INITAL/UNSET
+  --color__greyBorder:#E6E6E6; // INITAL/UNSET
+  --color__greyBg:#F5F5F5; // INITAL/UNSET
+  --color__greyDarkBg:#262626; // INITAL/UNSET
 
 
   /*	Colours - Generics: Use these values in styling
   ***********************************  */
-  --alpha: var(--pink); // INITAL/UNSET
-  --beta: var(--blue); // INITAL/UNSET
-  --charlie: var(--yellow); // INITAL/UNSET
+  --color__alpha: var(--color__pink); // INITAL/UNSET
+  --color__beta: var(--color__blue); // INITAL/UNSET
+  --color__charlie: var(--color__yellow); // INITAL/UNSET
   
-  --pageBackground: white; // INITAL/UNSET
-  --defaultText: black;
+  --color__pageBackground: white; // INITAL/UNSET
+  --color__defaultText: black;
 }
 
 // [data-theme="dark"] { 
-//   --pageBackground: black; // INITAL/UNSET
-//   --defaultText: white; // INITAL/UNSET
+//   --color__pageBackground: black; // INITAL/UNSET
+//   --color__defaultText: white; // INITAL/UNSET
 // }

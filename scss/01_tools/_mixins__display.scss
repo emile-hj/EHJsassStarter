@@ -24,12 +24,11 @@
   );
 
 }
-
 @mixin grid($columnCount, $isNew:null) {
 	@if $isNew {
 		display:grid;
-		grid-gap:$grid_gutterWidth_rem;
-    grid-row-gap:#{$grid_gutterWidth_fixed * 2}rem;
+		grid-gap:$gridGap;
+    // grid-row-gap:$gridRowGap;
 	}
 	grid-template-columns: repeat($columnCount, 1fr);
 }

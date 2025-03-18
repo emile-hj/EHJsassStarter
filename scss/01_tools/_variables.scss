@@ -8,20 +8,39 @@ $grid_sizingUnit:rem;
 $grid_columnCount: 12;
 
 // Set the pixel width of columns
-$grid_columnWidth_fixed: 75; // SET THIS UNIT in px
-$grid_columnWidth_fixed: math.div($grid_columnWidth_fixed, 16); // converted to rem
+// $grid_columnWidth: 57; // SET THIS UNIT in px
+$grid_columnWidth: 76; // SET THIS UNIT in px
+$grid_columnWidth_rem: math.div($grid_columnWidth, 16); // converted to rem
 
 // Set the pixel width of gutters
-$grid_gutterWidth_fixed: 35; // SET THIS UNIT in px
-$grid_gutterWidth_fixed: math.div($grid_gutterWidth_fixed, 16); // converted to rem
-$grid_gutterWidth_rem: #{$grid_gutterWidth_fixed}rem;
+$grid_gutterWidth: 40; // SET THIS UNIT in px
+$grid_gutterWidth_rem: math.div($grid_gutterWidth, 16); // converted to rem
+$grid_gutterWidth_remUnit: #{$grid_gutterWidth_rem}rem;
 
-$grid_columnsWidth_fixed: $grid_columnCount * $grid_columnWidth_fixed; // width of all columns in the grid is equal to column count times width of a column
-$grid_guttersWidth_fixed: ($grid_columnCount * $grid_gutterWidth_fixed) - $grid_gutterWidth_fixed; // width of all gutters in the grid is equal to column count times width of a gutter, minus one gutter (gutters are always internal)
-$grid_totalWidth_fixed: $grid_columnsWidth_fixed + $grid_guttersWidth_fixed; // total width of grid is equal to width of columns plus gutters
-$grid_maxWidth: unquote( "#{$grid_totalWidth_fixed}#{$grid_sizingUnit}" ); // suffix the sizing unit on the fixed value: Max width of the grid as a fixed value with sizing unit
+$grid_gutterWidth--mobile:26;
+
+
+$grid_columnsWidth: $grid_columnCount * $grid_columnWidth_rem; // width of all columns in the grid is equal to column count times width of a column
+$grid_guttersWidth: ($grid_columnCount * $grid_gutterWidth_rem) - $grid_gutterWidth_rem; // width of all gutters in the grid is equal to column count times width of a gutter, minus one gutter (gutters are always internal)
+$grid_totalWidth: $grid_columnsWidth + $grid_guttersWidth; // total width of grid is equal to width of columns plus gutters
+$grid_maxWidth: unquote( "#{$grid_totalWidth}#{$grid_sizingUnit}" ); // suffix the sizing unit on the fixed value: Max width of the grid as a fixed value with sizing unit
 
 $width__minSiteWidth_PX: 320px; // The minimum width of the site
+
+$gridGap:clamp(1.625rem, 2.7586206897vw, 2.5rem); // calculated with:
+// @include clamp(
+//     grid-gap, 
+//     $grid_gutterWidth--mobile, 
+//     $grid_gutterWidth, 
+//     1450
+// );
+$gridRowGapLarge:clamp(2.4375rem, 4.1379310345vw, 3.75rem); // calculated with:
+// @include clamp(
+//     grid-gap, 
+//     39, 
+//     60,
+//     1450
+//   );
 
 
 /* 	Fonts – Specfics
@@ -36,6 +55,7 @@ $font__helvetica: Helvetica, Arial, sans-serif; // INITAL/UNSET
 *********************************** */
 $font__body: $font__helvetica; // INITAL/UNSET
 $font__heading: $font__helvetica; // INITAL/UNSET
+
 
 
 

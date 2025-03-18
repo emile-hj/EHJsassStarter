@@ -42,20 +42,20 @@
 :root {
   /*	Colours - Specifics: Don't use directly (unless its grey or something neutral)
   ***********************************  */
-  --pink: #FF557A;
-  --blue: #3a8dff;
-  --yellow: #ffbf00;
-  --grey:#6F6F6F;
-  --greyBorder:#E6E6E6;
-  --greyBg:#F5F5F5;
-  --greyDarkBg:#262626;
+  --color__pink: #FF557A;
+  --color__blue: #3a8dff;
+  --color__yellow: #ffbf00;
+  --color__grey:#6F6F6F;
+  --color__greyBorder:#E6E6E6;
+  --color__greyBg:#F5F5F5;
+  --color__greyDarkBg:#262626;
   /*	Colours - Generics: Use these values in styling
   ***********************************  */
-  --alpha: var(--pink);
-  --beta: var(--blue);
-  --charlie: var(--yellow);
-  --pageBackground: white;
-  --defaultText: black;
+  --color__alpha: var(--color__pink);
+  --color__beta: var(--color__blue);
+  --color__charlie: var(--color__yellow);
+  --color__pageBackground: white;
+  --color__defaultText: black;
 }
 
 * {
@@ -457,7 +457,7 @@ body {
   min-height: 100%;
 }
 
-.thePage {
+.the-page {
   position: relative;
   height: 100%;
   z-index: 2;
@@ -493,71 +493,64 @@ html.lenis {
   padding-left: clamp(1.25rem, 5.9027777778vw, 5.3125rem);
   padding-right: clamp(1.25rem, 5.9027777778vw, 5.3125rem);
 }
-.pane.noPadding {
+.pane.no-padding {
   padding-left: 0;
   padding-right: 0;
 }
-.pane .paneInner {
-  max-width: 80.3125rem;
+.pane .pane-inner {
+  max-width: 84.5rem;
   margin: 0 auto;
 }
-.pane .paneInner.widthUnconstrained {
+.pane .pane-inner.widthUnconstrained {
   max-width: none;
 }
 
-.mainContent {
+.main-content {
   display: grid;
-  grid-gap: 2.1875rem;
-  grid-row-gap: 4.375rem;
+  grid-gap: clamp(1.625rem, 2.7586206897vw, 2.5rem);
   grid-template-columns: repeat(1, 1fr);
 }
 @media only screen and (min-width: 912px) {
-  .mainContent {
+  .main-content {
     grid-template-columns: repeat(12, 1fr);
   }
-  .mainContent #content {
+  .main-content #content {
     grid-column: 1/9;
   }
-  .mainContent .sidebarSecond {
+  .main-content .sidebarSecond {
     grid-column: 10/13;
   }
 }
 
-.txtBox {
-  margin-top: 2rem;
-}
-
 /*  Default layouts:
 ************************************* */
-.gridList {
+.grid-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.gridList.style__1col {
+.grid-list.style__1col {
   display: grid;
-  grid-gap: 2.1875rem;
-  grid-row-gap: 4.375rem;
+  grid-gap: clamp(1.625rem, 2.7586206897vw, 2.5rem);
   grid-template-columns: repeat(1, 1fr);
 }
-.gridList.style__4col {
+.grid-list.style__4col {
   display: grid;
-  grid-gap: 2.1875rem;
-  grid-row-gap: 4.375rem;
+  grid-gap: clamp(1.625rem, 2.7586206897vw, 2.5rem);
   grid-template-columns: repeat(1, 1fr);
 }
 @media only screen and (min-width: 552px) {
-  .gridList.style__4col {
+  .grid-list.style__4col {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 840px) {
-  .gridList.style__4col {
+  .grid-list.style__4col {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1128px) {
-  .gridList.style__4col {
+  .grid-list.style__4col {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -2208,7 +2201,7 @@ figure .field--name-field-media-oembed-video,
 }
 #sliding-popup .popup-content {
   width: auto;
-  max-width: 80.3125rem;
+  max-width: 84.5rem;
   margin: 0 auto;
   padding-left: 4.5%;
   padding-right: 4.5%;
