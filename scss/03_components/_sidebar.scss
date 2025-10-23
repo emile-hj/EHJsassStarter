@@ -42,7 +42,7 @@
       }
     }
 
-    .anchorWrap {
+    .anchor-wrap {
       display:flex;
       justify-content: space-between;
       align-items: center;
@@ -50,7 +50,7 @@
       width:100%;
     }
 
-    .menuControl {
+    .menu-accordion-toggle {
       @include display__block_hideText;
       width:2em;
       height:2em;

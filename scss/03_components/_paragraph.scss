@@ -20,7 +20,7 @@
     @include typeStyle(heading,h3);
     margin:0;
   }
-  .accordionBtn {
+  .accordion-btn {
     @include typeStyle(heading,h3);
     display:flex;
     justify-content: space-between;
