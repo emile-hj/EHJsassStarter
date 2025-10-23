@@ -199,13 +199,7 @@
     ol {
       margin-bottom:0;
       li {
-        // &::before {
-        //   top:0;
-        //   background-color:transparent;
-        //   width:auto;
-        //   height:auto;
-        //   text-indent:0;
-        // }
+
       }
     }
 
@@ -228,48 +222,31 @@
 
     // only ol li
     > li {
+      counter-increment: item;
+
       &::before {
-        counter-increment: item;
-        content: counter(item)".";
-
-        font-size:0.82em;
-        font-weight:600;
+        content: counter(item);
+        font-weight:500;
       }
+
+      > ol {
+        counter-reset:lower-alpha;
+
+        // list-style-type:lower-alpha;
+        
+        // only ol li
+        > li {
+          counter-increment: lower-alpha;
+
+          &::before {
+            content:counter(lower-alpha, lower-alpha);
+          }
+        }
+
+      }
+    
     }
-
-    // level 1 and down
-    li {
-
-
-      // level 2 and down
-      ul,
-      ol {
-        margin-bottom:0;
-        li {
-          &::before {
-
-          }
-          // level 3 and down
-          li {
-            &::before {
-              content: "•";
-            }
-          }
-        }
-      } // End level 2 and down
-
-
-      // level 2 and down ul
-      ul {
-        li {
-          &::before {
-
-          }
-        }
-      }
-
-    } // End level 1 li
-
+    
   }
 
 

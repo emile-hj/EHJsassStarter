@@ -16,7 +16,7 @@
     max-width: $grid_maxWidth;
     margin: 0 auto;
 
-    @include siteSidePaddings;
+    @include paneSidePaddings;
 
    display:flex;
     flex-wrap:wrap;

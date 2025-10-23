@@ -18,20 +18,47 @@ body {
 
   min-width:$width__minSiteWidth_PX;
   min-height:100%;
+
+  display:flex;
+  flex-direction: column;
+
+  overflow:hidden;
+
+  // pass page height down to 'sticky' footer
+  > div {
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+  }
+
 }
 
 .the-page {
+  flex-grow:1;
+
   position:relative;
+
+  display:flex;
+  flex-direction: column;
 
   height:100%;
   z-index: 2;
 
   overflow:hidden;
+
+  // this is just to find the values used elsewhere
+  // @include clamp(
+  //   grid-gap, 
+  //   $grid_gutterWidth--mobile, 
+  //   $grid_gutterWidth, 
+  //   1450
+  // );
 }
 
-html.lenis {
-  height: auto;
-}
+// disable lenis rule so as to pass height from html to page ('sticky' footer)
+// html.lenis {
+//   height: auto;
+// }
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
@@ -52,10 +79,7 @@ html.lenis {
   width:100%;
   background-color:transparent;
 
-  padding:{
-    @include clamp(left,20,85,1440);
-    @include clamp(right,20,85,1440);
-  }
+  @include paneSidePaddings;
 
   &.no-padding {
     padding:{
@@ -93,7 +117,6 @@ html.lenis {
 }
 
 
-
 /*  Default layouts:
 ************************************* */
 .grid-list {
@@ -101,20 +124,32 @@ html.lenis {
   padding:0;
   margin:0;
 
-  &.style__1col {
-    @include grid(1,true);
-  }
-  &.style__4col {
-    @include grid(1,true);
+  &:not(.tns-slider) {
+    &.style__1col {
+      @include grid(1,true);
+    }
+    &.style__3col {
+      @include grid(1,true);
 
-    @include min_552 {
-      @include grid(2);
+      @include min_552 {
+        @include grid(2);
+      }
+      @include min_912 {
+        @include grid(3);
+      }
     }
-    @include min_840 {
-      @include grid(3);
-    }
-    @include min_1128 {
-      @include grid(4);
+    &.style__4col {
+      @include grid(1,true);
+
+      @include min_552 {
+        @include grid(2);
+      }
+      @include min_840 {
+        @include grid(3);
+      }
+      @include min_1128 {
+        @include grid(4);
+      }
     }
   }
 }

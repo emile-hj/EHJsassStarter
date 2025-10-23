@@ -53,7 +53,6 @@
   letter-spacing: 0;
   line-height: 1.45em;
   font-size: clamp(1.125rem, 2.3026315789vw, 1.3125rem);
-  margin-bottom: 1.45em;
 }
 @media print {
   .field--type-text-long p,
@@ -62,6 +61,12 @@
   .ck-content li {
     font-size: 10pt;
   }
+}
+.field--type-text-long p,
+.field--type-text-long li,
+.ck-content p,
+.ck-content li {
+  margin-bottom: 1.45em;
 }
 .field--type-text-long p em,
 .field--type-text-long li em,
@@ -94,19 +99,31 @@
   color: var(--beta);
 }
 
-.field--type-text-long,
-.ck-content {
-  /*  Headings
-  ************************************* */
-  /*  Lists
-  ************************************* */
-  /*  Images
-  ************************************* */
-}
 .field--type-text-long .cta_right,
 .ck-content .cta_right {
   display: inline-block;
   cursor: pointer;
+}
+.field--type-text-long .cta_right, .field--type-text-long .cta_right:link,
+.ck-content .cta_right,
+.ck-content .cta_right:link {
+  color: white;
+  text-decoration: none;
+}
+.field--type-text-long .cta_right,
+.ck-content .cta_right {
+  background: none;
+  background-color: var(--defaultText);
+}
+.field--type-text-long .cta_right:hover, .field--type-text-long .cta_right:focus-visible,
+.ck-content .cta_right:hover,
+.ck-content .cta_right:focus-visible {
+  color: var(--defaultText);
+  background-color: var(--alpha);
+  border-color: var(--alpha);
+}
+.field--type-text-long .cta_right,
+.ck-content .cta_right {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
   line-height: 1.2em;
@@ -118,25 +135,16 @@
   padding-right: 1.25em;
   border: thin solid var(--defaultText);
 }
-.field--type-text-long .cta_right, .field--type-text-long .cta_right:link,
-.ck-content .cta_right,
-.ck-content .cta_right:link {
-  color: white;
-  background: none;
-  background-color: var(--defaultText);
-}
 .field--type-text-long .cta_right:hover, .field--type-text-long .cta_right:focus-visible,
 .ck-content .cta_right:hover,
 .ck-content .cta_right:focus-visible {
   color: var(--defaultText);
   background-color: var(--alpha);
-  border-color: var(--alpha);
 }
-.field--type-text-long .cta_right:hover, .field--type-text-long .cta_right:focus-visible,
-.ck-content .cta_right:hover,
-.ck-content .cta_right:focus-visible {
-  color: var(--defaultText);
-  background-color: var(--alpha);
+.field--type-text-long,
+.ck-content {
+  /*  Headings
+  ************************************* */
 }
 .field--type-text-long h2,
 .ck-content h2 {
@@ -186,15 +194,16 @@
   text-decoration: none;
   border-bottom: 0;
 }
+.field--type-text-long,
+.ck-content {
+  /*  Lists
+  ************************************* */
+}
 .field--type-text-long ul,
 .field--type-text-long ol,
 .ck-content ul,
 .ck-content ol {
   font-size: clamp(1.125rem, 2.3026315789vw, 1.3125rem);
-  margin: 0 0 1.5em 0;
-  padding: 0;
-  clear: both;
-  display: block;
 }
 @media print {
   .field--type-text-long ul,
@@ -203,6 +212,15 @@
   .ck-content ol {
     font-size: 10pt;
   }
+}
+.field--type-text-long ul,
+.field--type-text-long ol,
+.ck-content ul,
+.ck-content ol {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  clear: both;
+  display: block;
 }
 .field--type-text-long ul li,
 .field--type-text-long ol li,
@@ -303,24 +321,31 @@
 .ck-content ol {
   counter-reset: item;
 }
+.field--type-text-long ol > li,
+.ck-content ol > li {
+  counter-increment: item;
+}
 .field--type-text-long ol > li::before,
 .ck-content ol > li::before {
-  counter-increment: item;
-  content: counter(item) ".";
-  font-size: 0.82em;
-  font-weight: 600;
+  content: counter(item);
+  font-weight: 500;
 }
-.field--type-text-long ol li ul,
-.field--type-text-long ol li ol,
-.ck-content ol li ul,
-.ck-content ol li ol {
-  margin-bottom: 0;
+.field--type-text-long ol > li > ol,
+.ck-content ol > li > ol {
+  counter-reset: lower-alpha;
 }
-.field--type-text-long ol li ul li li::before,
-.field--type-text-long ol li ol li li::before,
-.ck-content ol li ul li li::before,
-.ck-content ol li ol li li::before {
-  content: "•";
+.field--type-text-long ol > li > ol > li,
+.ck-content ol > li > ol > li {
+  counter-increment: lower-alpha;
+}
+.field--type-text-long ol > li > ol > li::before,
+.ck-content ol > li > ol > li::before {
+  content: counter(lower-alpha, lower-alpha);
+}
+.field--type-text-long,
+.ck-content {
+  /*  Images
+  ************************************* */
 }
 .field--type-text-long img,
 .field--type-text-long figure,

@@ -49,10 +49,12 @@ $space__side_in_button_default:1.25em;
   &,
   &:link {
     color:$textColor;
-    background:none;
-    background-color:$bgColor;
+    text-decoration: none;  
   }
 
+  background:none;
+  background-color:$bgColor;
+  
   &:hover,
   &:focus-visible {
     @include buttonPartial__basicColors(

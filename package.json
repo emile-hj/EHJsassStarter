@@ -1,5 +1,5 @@
 {
-  "name": "efd9minimal",
+  "name": "EHJsassStarter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.86.0"
+    "sass": "^1.93.2"
   }
 }
