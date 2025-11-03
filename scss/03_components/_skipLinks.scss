@@ -1,15 +1,9 @@
 @use "../01_tools/01_tools" as *;
 
 .skip-link {
-<<<<<<< HEAD
   @include typeStyle(heading, h4);
   text-align: center;
   margin: 0 !important;
-=======
-	@include typeStyle(heading,h4);
-	text-align:center;
-	margin:0 !important;
->>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
 
   &:focus {
     display: block;

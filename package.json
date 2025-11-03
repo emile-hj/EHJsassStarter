@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "EHJ Sass Starter",
-=======
-  "name": "EHJsassStarter",
->>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,10 +14,6 @@
     "sass": "^1.93.3"
   },
   "dependencies": {
-<<<<<<< HEAD
     "prettier": "^3.6.2"
-=======
-    "sass": "^1.93.2"
->>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
   }
 }

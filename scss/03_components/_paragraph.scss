@@ -19,13 +19,8 @@
     margin: 0;
   }
   .accordion-btn {
-<<<<<<< HEAD
     @include typeStyle(heading, h3);
     display: flex;
-=======
-    @include typeStyle(heading,h3);
-    display:flex;
->>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
     justify-content: space-between;
     align-items: center;
     width: 100%;

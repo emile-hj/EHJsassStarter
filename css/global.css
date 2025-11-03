@@ -1437,18 +1437,6 @@ form input[type=search]::-webkit-search-cancel-button {
   }
 }
 
-<<<<<<< HEAD
-=======
-.listing_tag {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  line-height: 1.47619em;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: clamp(0.875rem, 2.2857142857vw, 1rem);
-}
-
->>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
 .card {
   position: relative;
 }

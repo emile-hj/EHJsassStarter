@@ -6,7 +6,6 @@
       @include display__block_hideText;
       line-height: 0;
 
-<<<<<<< HEAD
       @include clamp(width, 168, 230, 1440);
       aspect-ratio: 1/0.18;
       @include asset__logo;
@@ -19,22 +18,5 @@
         @include elementInvisible;
       }
     }
-=======
-    	@include clamp(width,168,230,1440);
-			aspect-ratio: 1/0.18;
-			@include asset__logo;
-			background-repeat: no-repeat;
-			background-size: contain;
-
-    	margin:0;
-
-
-    	img {
-    		@include elementInvisible;
-    	}
-
-    }
-
->>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
   }
 }
