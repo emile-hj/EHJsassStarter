@@ -1,111 +1,105 @@
+@use "../01_tools/01_tools" as *;
 
-
-/*  Sidebar (first or second)
-*********************************** */
 .sidebar {
-
   nav h2 {
-    @include typeStyle(heading,h4);
+    @include typeStyle(heading, h4);
   }
 
   .menu {
-    @include typeStyle(body,small);
+    @include typeStyle(body, small);
 
-    list-style:none;
+    list-style: none;
 
-    width:100%;
-    
-    margin:0;
+    width: 100%;
 
+    margin: 0;
 
     li {
-     display:flex;
-      flex-wrap:wrap;
-      align-items:center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     a {
-      text-decoration:none;
-      color:var(--defaultText);
+      text-decoration: none;
+      color: var(--defaultText);
 
       width: calc(100% - 2em); // 100 minus .menu_control width
 
-      padding:{
-        top:0.4em;
-        bottom:0.4em;
+      padding: {
+        top: 0.4em;
+        bottom: 0.4em;
       }
 
       &:hover,
       &:focus-visible,
       &.menu-item--active-trail {
-        color:var(--beta);
+        color: var(--beta);
       }
     }
 
-    .anchorWrap {
-      display:flex;
+    .anchor-wrap {
+      display: flex;
       justify-content: space-between;
       align-items: center;
 
-      width:100%;
+      width: 100%;
     }
 
-    .menuControl {
+    .menu-accordion-toggle {
       @include display__block_hideText;
-      width:2em;
-      height:2em;
-      background-color:transparent;
+      width: 2em;
+      height: 2em;
+      background-color: transparent;
       @include asset__chevron(down, beta, normal);
-      background-repeat:no-repeat;
-      background-position:50% 50%;
-      background-size:50% auto;
-      border:0;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 50% auto;
+      border: 0;
 
-      transform:rotate(0deg);
+      transform: rotate(0deg);
 
       transition: transform 0.25s;
 
       &[data-state="open"] {
-        transform:rotate(180deg);
+        transform: rotate(180deg);
       }
     }
 
     .menu {
-      padding:{
-        left:1em;
+      padding: {
+        left: 1em;
       }
-      
+
       // border-top:thin solid black;
-  
+
       li {
-        padding:{
-          right:0.5em;
+        padding: {
+          right: 0.5em;
         }
       }
 
       .menu {
-        border-top:0;
+        border-top: 0;
       }
     }
   }
 
   // Level 1 only
   > .menu {
-    padding:0;
+    padding: 0;
 
     > li {
-      border-top:thin solid black;
+      border-top: thin solid black;
 
       > a {
-        padding:{
-          left:1em;
-          right:1em;
-          top:1em;
-          bottom:1em;
+        padding: {
+          left: 1em;
+          right: 1em;
+          top: 1em;
+          bottom: 1em;
         }
       }
     }
   }
-
-
 }

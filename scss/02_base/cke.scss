@@ -1,53 +1,48 @@
 // USED FOR DRUPAL SITES - CKE
 
-@import '../01_tools/01_allTools';
-
+@use "../01_tools/01_tools" as *;
 
 // Lowest common denominator, all text formats have these styles
 .field--type-text-long,
 .ck-content {
-
   /*	Paragraphs
   ************************************* */
   // Normal p and li
   p,
   li {
-    @include typeStyle(body,normal);
+    @include typeStyle(body, normal);
 
-    margin:{
-      bottom:1.45em;
+    margin: {
+      bottom: 1.45em;
     }
 
     em {
-      font-style:italic;
+      font-style: italic;
     }
     u {
-      text-decoration:underline;
+      text-decoration: underline;
     }
     strong {
-      font-weight:700;
+      font-weight: 700;
     }
   }
 
   a:not(.cta) {
     &,
     &:link {
-      color:var(--defaultText);
+      color: var(--defaultText);
 
       &:hover,
       &:focus-visible {
-       color:var(--beta);
+        color: var(--beta);
       }
     }
   }
-
-
 }
 
 // More advanced text formats have these styles
 .field--type-text-long,
 .ck-content {
-
   .cta_right {
     @include button();
 
@@ -60,7 +55,7 @@
   ************************************* */
 
   h2 {
-    @include typeStyle(heading,h2);
+    @include typeStyle(heading, h2);
     // margin:{
     //   top:1.7em;
     //   bottom:1.25em;
@@ -78,7 +73,7 @@
     a {
       color: var(--alpha);
       text-decoration: none;
-      border-bottom:0;
+      border-bottom: 0;
     }
 
     // strong {
@@ -87,7 +82,7 @@
   }
 
   h3 {
-    @include typeStyle(heading,h3);
+    @include typeStyle(heading, h3);
 
     // prevent style changes
     em {
@@ -101,7 +96,7 @@
     a {
       color: var(--alpha);
       text-decoration: none;
-      border-bottom:0;
+      border-bottom: 0;
     }
 
     // strong {
@@ -116,54 +111,52 @@
   ol {
     @include typeHierarchySizes(bodyNormal);
     margin: 0 0 1.5em 0;
-    padding:0;
+    padding: 0;
     clear: both;
     display: block;
 
     li {
-      position:relative;
+      position: relative;
       list-style-type: none;
       list-style-image: none;
-      position:relative;
+      position: relative;
       // margin-bottom: 0.5em;
-      padding-left:1.25em;
+      padding-left: 1.25em;
 
       // Psuedo for bullets and numbering
       &::before {
-        position:absolute;
-        top:0;
-        left:0;
+        position: absolute;
+        top: 0;
+        left: 0;
         padding: 0;
-        color:var(--alpha);
+        color: var(--alpha);
       }
       p {
-        margin:0;
+        margin: 0;
       }
 
       // level 2 and down
       ul,
       ol {
-        margin-top:0.5em;
+        margin-top: 0.5em;
         li {
-
         }
       }
     }
 
-
     // prevent use of CTA in list
     .cta {
-      padding:0;
-      border:0;
+      padding: 0;
+      border: 0;
 
       &::before,
       &::after {
-        content:none;
+        content: none;
       }
 
       &:hover,
       &:focus {
-        background-color:transparent !important;
+        background-color: transparent !important;
       }
     }
   }
@@ -175,20 +168,20 @@
     // level 1 and down
     li {
       &::before {
-        content:"–";
+        content: "–";
       }
     }
 
     // only ul li
     > li {
       &::before {
-        content:"–";
-        top:0.65em;
+        content: "–";
+        top: 0.65em;
         left: 0;
         @include display__block_hideText;
-        width:6px;
-        height:6px;
-        background-color:var(--alpha);
+        width: 6px;
+        height: 6px;
+        background-color: var(--alpha);
         border-radius: 50%;
         box-sizing: border-box;
       }
@@ -197,15 +190,8 @@
     // level 2 and down
     ul,
     ol {
-      margin-bottom:0;
+      margin-bottom: 0;
       li {
-        // &::before {
-        //   top:0;
-        //   background-color:transparent;
-        //   width:auto;
-        //   height:auto;
-        //   text-indent:0;
-        // }
       }
     }
 
@@ -214,12 +200,11 @@
       // only ul li
       > li {
         &::before {
-          background-color:transparent;
-          border:1px solid var(--defaultText);
+          background-color: transparent;
+          border: 1px solid var(--defaultText);
         }
       }
     }
-
   }
 
   // Ordered lists
@@ -228,115 +213,93 @@
 
     // only ol li
     > li {
-      &::before {
-        counter-increment: item;
-        content: counter(item)".";
+      counter-increment: item;
 
-        font-size:0.82em;
-        font-weight:600;
+      &::before {
+        content: counter(item);
+        font-weight: 500;
+      }
+
+      > ol {
+        counter-reset: lower-alpha;
+
+        // list-style-type:lower-alpha;
+
+        // only ol li
+        > li {
+          counter-increment: lower-alpha;
+
+          &::before {
+            content: counter(lower-alpha, lower-alpha);
+          }
+        }
       }
     }
-
-    // level 1 and down
-    li {
-
-
-      // level 2 and down
-      ul,
-      ol {
-        margin-bottom:0;
-        li {
-          &::before {
-
-          }
-          // level 3 and down
-          li {
-            &::before {
-              content: "•";
-            }
-          }
-        }
-      } // End level 2 and down
-
-
-      // level 2 and down ul
-      ul {
-        li {
-          &::before {
-
-          }
-        }
-      }
-
-    } // End level 1 li
-
   }
-
 
   /*  Images
   ************************************* */
   img,
   figure {
-    display:block;
-    max-width:100%;
-    height:auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
     margin: {
-      top:3rem;
-      bottom:3rem;
+      top: 3rem;
+      bottom: 3rem;
     }
   }
 
   img {
-    display:block;
+    display: block;
   }
 
   figure {
-    display:table;
+    display: table;
     margin: {
-      left:0;
-      right:0;
+      left: 0;
+      right: 0;
     }
 
     > * {
-      display:table-row;
+      display: table-row;
     }
 
     br {
-      display:none;
+      display: none;
     }
 
     &,
     img {
-      max-width:100%;
-      height:auto;
+      max-width: 100%;
+      height: auto;
     }
     img {
-      margin:0;
-      z-index:1;
+      margin: 0;
+      z-index: 1;
     }
 
     figcaption {
-      @include typeStyle(body,small);
+      @include typeStyle(body, small);
 
-      display:table-caption;
+      display: table-caption;
       caption-side: bottom;
 
-      margin:{
-        top:1em;
+      margin: {
+        top: 1em;
       }
     }
   }
 
   .align-left,
   .align-right {
-
-    margin:{
-      top:0;
-      bottom:1.5rem;
+    margin: {
+      top: 0;
+      bottom: 1.5rem;
     }
 
     img {
-      margin:0;
+      margin: 0;
     }
 
     // @include max_552 {
@@ -349,12 +312,11 @@
     // }
 
     @include min_552 {
-      max-width:45%;
+      max-width: 45%;
     }
   }
 
   .align-left {
-
     @include min_552 {
       float: left;
       clear: left;
@@ -362,7 +324,6 @@
         right: 2.5rem;
       }
     }
-
   }
   .align-right {
     @include min_552 {
@@ -372,15 +333,14 @@
         left: 2.5rem;
       }
     }
-
   }
 
   .align-center {
     &,
     img {
-      margin:{
-        left:auto;
-        right:auto;
+      margin: {
+        left: auto;
+        right: auto;
       }
     }
   }
@@ -388,28 +348,27 @@
 
 .ck-content {
   strong {
-    font-weight:700;
+    font-weight: 700;
   }
 }
 
 .responsive-embed {
-  margin:{
-    top:2rem;
-    bottom:2rem;
+  margin: {
+    top: 2rem;
+    bottom: 2rem;
   }
 }
 
 .cke_editable,
 .field-name-body {
   hr {
-    border:0;
-    border-bottom:thin solid var(--alpha);
-    margin:{
-      top:3rem;
-      bottom:3rem;
+    border: 0;
+    border-bottom: thin solid var(--alpha);
+    margin: {
+      top: 3rem;
+      bottom: 3rem;
     }
   }
-
 }
 
 .field--type-text-long {
@@ -419,10 +378,9 @@
 // Remove top margin from first body item
 .field--type-text-long {
   > *:first-child {
-    margin-top:0 !important;
+    margin-top: 0 !important;
   }
   > *:last-child {
-    margin-bottom:0 !important;
+    margin-bottom: 0 !important;
   }
-
 }

@@ -1,28 +1,26 @@
+@use "../01_tools/01_tools" as *;
 
 .pane__header {
-  position:relative;
-  top:0;
-  left:0;
-  z-index:9999;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 
-  padding:{
-    top:1.5rem;
-    bottom:1.5rem;
+  padding: {
+    top: 1.5rem;
+    bottom: 1.5rem;
   }
-  margin:{
-    @include clamp(bottom,40,100,1440);
+  margin: {
+    @include clamp(bottom, 40, 100, 1440);
   }
-
 }
 #header {
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 
-  width:100%;
+  width: 100%;
 }
-
-
 
 // Interactive search block
 // .search-block-form {

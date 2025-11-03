@@ -1,164 +1,159 @@
+@use "../01_tools/01_tools" as *;
 
-/* 	Forms
-*********************************** */
 $selector__formTextInputs: 'input[type="text"], input[type="password"], input[type="email"], input[type="search"], input[type="phone"], input[type="number"], .form-text, textarea';
 
 form {
-
   label {
-    @include typeStyle(heading,h4);
-    display:block;
+    @include typeStyle(heading, h4);
+    display: block;
   }
 
   input,
   textarea {
     &::-webkit-input-placeholder {
-      color:var(--defaultText);
+      color: var(--defaultText);
     }
 
     &::-moz-placeholder {
-      color:var(--defaultText);
+      color: var(--defaultText);
     }
 
     &:-moz-placeholder {
-      color:var(--defaultText);
+      color: var(--defaultText);
     }
 
     &:-ms-input-placeholder {
-      color:var(--defaultText);
+      color: var(--defaultText);
     }
     &::placeholder {
-      color:var(--defaultText);
+      color: var(--defaultText);
     }
   }
 
   #{$selector__formTextInputs} {
-    @include typeStyle(body,normal);
+    @include typeStyle(body, normal);
 
-    width:100%;
-    padding:{
-      top:0.45em;
-      bottom:0.45em;
-      left:0.8em;
-      right:0.8em;
+    width: 100%;
+    padding: {
+      top: 0.45em;
+      bottom: 0.45em;
+      left: 0.8em;
+      right: 0.8em;
     }
 
-    background-color:transparent;
-    border:thin solid var(--alpha);
-    -webkit-appearance:none;
-    border-radius:0;
+    background-color: transparent;
+    border: thin solid var(--alpha);
+    -webkit-appearance: none;
+    border-radius: 0;
 
     &:focus {
-      outline:0;
+      outline: 0;
     }
-
   }
   textarea {
     resize: vertical;
   }
 
   .form-item {
-    margin:{
-      bottom:2em;
+    margin: {
+      bottom: 2em;
     }
   }
 
   .description {
-    @include typeStyle(body,small);
-    margin:{
-      top:0.75em;
+    @include typeStyle(body, small);
+    margin: {
+      top: 0.75em;
     }
   }
 
   fieldset {
-    padding:0;
+    padding: 0;
     margin: 0;
-    border:0;
+    border: 0;
   }
 
   .form-checkboxes {
-    list-style:none;
+    list-style: none;
 
     label {
-      @include typeStyle(menu,selectList);
+      @include typeStyle(menu, selectList);
     }
 
     .form-item {
-      position:relative;
+      position: relative;
 
-      margin:{
-        bottom:0.75em;
+      margin: {
+        bottom: 0.75em;
       }
-  
+
       input[type="checkbox"] {
-        position:absolute;
-        top:0;
-        left:0;
-  
-        opacity:0;  
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
       }
 
       label {
-        padding:{
-          left:1.5em;
+        padding: {
+          left: 1.5em;
         }
-  
-        cursor:pointer;
-  
+
+        cursor: pointer;
+
         // Pseudo for styled check
         &::before {
-          content:" ";
-          display:block;
+          content: " ";
+          display: block;
           position: absolute;
           top: 53%;
           left: 0;
-  
-          width:0.89em;
-          height:0.89em;
+
+          width: 0.89em;
+          height: 0.89em;
 
           @include asset__tick(white);
           background-repeat: no-repeat;
-          background-size:62% auto;
-          background-position:52% 56%;
+          background-size: 62% auto;
+          background-position: 52% 56%;
 
-          border:thin solid var(--defaultText);
-  
-          border-radius:0.294118em;
-  
+          border: thin solid var(--defaultText);
+
+          border-radius: 0.294118em;
+
           transform: translateY(-50%);
         }
-  
+
         &:hover {
           // color:$color__charlie;
-          color:var(--alpha);
+          color: var(--alpha);
         }
       }
-  
+
       input:checked + label {
         // Pseudo for styled check
         &::before {
-          background-color:var(--alpha);
-          border-color:var(--alpha);
+          background-color: var(--alpha);
+          border-color: var(--alpha);
         }
       }
-  
+
       input:focus + label {
-        color:var(--alpha);
+        color: var(--alpha);
       }
     }
-
 
     ul {
       list-style: none;
 
-      padding:0;
-      margin:0;
+      padding: 0;
+      margin: 0;
     }
-    li {  
-
+    li {
       &:last-child {
         .form-item {
-          margin-bottom:0;
+          margin-bottom: 0;
         }
       }
 
@@ -166,28 +161,27 @@ form {
         label {
           // pseudo to show has children
           &::after {
-            content:" (+)";
+            content: " (+)";
           }
         }
 
         ul {
-          display:none;
+          display: none;
         }
 
         &.active-children {
           label {
             // hide pseudo when already 'expanded'
             &::after {
-              content:none;
+              content: none;
             }
           }
 
           ul {
-            display:block;
+            display: block;
           }
         }
       }
-
     }
   }
 
@@ -197,14 +191,14 @@ form {
 
   input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
-    @include calcRemSize(12,width);
-    @include calcRemSize(12,height);
+    @include calcRemSize(12, width);
+    @include calcRemSize(12, height);
     // @include asset__close(white); TO DO!!!!
-    background-repeat:no-repeat;
-    background-size:contain;
-    margin:{
-      left:0.5em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: {
+      left: 0.5em;
     }
-    cursor:pointer;
+    cursor: pointer;
   }
 }

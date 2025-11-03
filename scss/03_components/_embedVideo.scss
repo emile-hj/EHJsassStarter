@@ -1,25 +1,27 @@
+@use "../01_tools/01_tools" as *;
+
 // Embedded video
 .field--name-field-media-oembed-video {
-  position:relative;
-  width:100%;
+  position: relative;
+  width: 100%;
   // max-width:100%;
-  aspect-ratio:16/9;
+  aspect-ratio: 16/9;
 
-  margin:{
-    top:2rem;
-    bottom:2rem;
+  margin: {
+    top: 2rem;
+    bottom: 2rem;
   }
 
   iframe {
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100% !important;
     height: 100% !important;
   }
 
   @include in_print {
-    display:none;
+    display: none;
   }
 }
 
@@ -29,7 +31,7 @@ figure,
 .align-right,
 .align-center {
   &:has(iframe) {
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -37,8 +39,6 @@ figure,
 .align-left,
 .align-right {
   .field--name-field-media-oembed-video {
-    margin:0;
+    margin: 0;
   }
 }
-
-

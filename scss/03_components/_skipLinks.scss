@@ -1,16 +1,17 @@
+@use "../01_tools/01_tools" as *;
 
-.skipLink {
-	@include typeStyle(heading,h4);
-	text-align:center;
-	margin:0 !important;
+.skip-link {
+  @include typeStyle(heading, h4);
+  text-align: center;
+  margin: 0 !important;
 
-	&:focus {
-		display:block;
-		overflow:hidden;
-		width:100%;
-		margin:{
-			top:0.5em !important;
-			bottom:0.5em !important;
-		}
-	}
+  &:focus {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin: {
+      top: 0.5em !important;
+      bottom: 0.5em !important;
+    }
+  }
 }

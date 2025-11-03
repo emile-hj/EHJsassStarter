@@ -1,20 +1,20 @@
+@use "./mixins__typeStyles" as *;
 
-$space__side_in_button_default:1.25em;
+$space__side_in_button_default: 1.25em;
 
 @mixin buttonPartial__basicColors(
-    $name:null,
-    $textColor:null,
-    $bgColor:null,
-    $borderColor:null,
-    $icon:null,
-    $iconColor:null
-  ){
-
+  $name: null,
+  $textColor: null,
+  $bgColor: null,
+  $borderColor: null,
+  $icon: null,
+  $iconColor: null
+) {
   @if $textColor != null {
-    color:$textColor;
+    color: $textColor;
   }
   @if $bgColor != null {
-    background-color:$bgColor;
+    background-color: $bgColor;
   }
 
   @if $icon == arrow_right {
@@ -24,34 +24,36 @@ $space__side_in_button_default:1.25em;
   }
 
   @if $borderColor != null {
-    border-color:$borderColor;
+    border-color: $borderColor;
   }
 }
 
 @mixin button(
-    $name:default,
-    $textColor:white,
-    $bgColor:var(--defaultText),
-    $borderColor:var(--defaultText),
-    $textColor--hov:var(--defaultText),
-    $bgColor--hov:var(--alpha),
-    $borderColor--hov:var(--alpha),
-    $icon:null,
-    $iconColor:null,
-    $iconColor--hov:null
-  ){
-  display:inline-block;
+  $name: default,
+  $textColor: white,
+  $bgColor: var(--defaultText),
+  $borderColor: var(--defaultText),
+  $textColor--hov: var(--defaultText),
+  $bgColor--hov: var(--alpha),
+  $borderColor--hov: var(--alpha),
+  $icon: null,
+  $iconColor: null,
+  $iconColor--hov: null
+) {
+  display: inline-block;
 
-  cursor:pointer;
+  cursor: pointer;
 
   // transition:background-color 0.25s;
 
   &,
   &:link {
-    color:$textColor;
-    background:none;
-    background-color:$bgColor;
+    color: $textColor;
+    text-decoration: none;
   }
+
+  background: none;
+  background-color: $bgColor;
 
   &:hover,
   &:focus-visible {
@@ -64,17 +66,17 @@ $space__side_in_button_default:1.25em;
   }
 
   @if $name == default {
-    @include typeStyle(button,primary);
+    @include typeStyle(button, primary);
 
     // position:relative; // contain pos abs child
 
-    padding:{
-      top:0.9em;
-      bottom:0.85em;
-      left:$space__side_in_button_default;
-      right:$space__side_in_button_default;
+    padding: {
+      top: 0.9em;
+      bottom: 0.85em;
+      left: $space__side_in_button_default;
+      right: $space__side_in_button_default;
     }
-    border:thin solid $borderColor;
+    border: thin solid $borderColor;
 
     // @if $icon == null {
     //   padding:{
@@ -88,12 +90,7 @@ $space__side_in_button_default:1.25em;
 
     &:hover,
     &:focus-visible {
-      @include buttonPartial__basicColors(
-        null,
-        $textColor--hov,
-        $bgColor--hov
-      );
+      @include buttonPartial__basicColors(null, $textColor--hov, $bgColor--hov);
     }
   }
-
 }

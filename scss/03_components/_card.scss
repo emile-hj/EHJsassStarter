@@ -1,0 +1,72 @@
+@use "../01_tools/01_tools" as *;
+
+.card {
+  position: relative;
+
+  .list-title {
+    @include typeStyle(heading, h4);
+
+    a {
+      color: var(--defaultText);
+      display: block;
+
+      // Pseudo for extend anchor area to cover whole block
+      &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  // Teaser
+  .teaser-text {
+    p {
+      @include typeStyle(body, small);
+      color: black;
+      margin-bottom: 1em;
+    }
+  }
+
+  &:has(a) {
+    position: relative;
+
+    a {
+      // link extender
+      &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      cursor: pointer;
+    }
+  }
+
+  &.style__default {
+    @include typeHierarchySizes(h4);
+
+    .image_box {
+      margin: {
+        bottom: 1em;
+      }
+    }
+  }
+}

@@ -1,22 +1,24 @@
+@use "../01_tools/01_tools" as *;
+
 .tns-nav {
-  display:flex;
+  display: flex;
   // justify-content: center;
-  
-  @include calcRemSize(20,gap);
+
+  @include calcRemSize(20, gap);
 
   button {
-    display:block;
-    @include calcRemSize(11,width);
+    display: block;
+    @include calcRemSize(11, width);
     aspect-ratio: 1 / 1;
-        
+
     background-color: black;
 
-    padding:0;
-    border:0;
+    padding: 0;
+    border: 0;
     border-radius: 50%;
-    
+
     &.tns-nav-active {
-      background-color:var(--alpha);
+      background-color: var(--alpha);
     }
   }
 }

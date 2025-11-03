@@ -1,20 +1,21 @@
+@use "../01_tools/01_tools" as *;
 
 nav.pager {
-  @include typeStyle(heading,h3);
+  @include typeStyle(heading, h3);
 
   ul {
-    list-style:none;
-   display:flex;
-    justify-content:center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 
-    padding:0;
+    padding: 0;
   }
 
   li {
-    margin-right:0.35em;
+    margin-right: 0.35em;
 
     &:last-child {
-      margin-right:0;
+      margin-right: 0;
     }
 
     a {
@@ -24,10 +25,8 @@ nav.pager {
     }
 
     &.pager__item--last a {
-
     }
     &.pager__item--first a {
-
     }
   }
 }

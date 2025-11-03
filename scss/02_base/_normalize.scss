@@ -1,4 +1,5 @@
-// Ehj addition
+@use "../01_tools/01_tools" as *;
+
 * {
   box-sizing: border-box;
 }
@@ -179,7 +180,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -189,7 +191,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -376,34 +379,33 @@ a:-webkit-any-link {
   @include elementFocusable;
 }
 
-
 ul.menu {
-  list-style:none;
-  padding:0;
+  list-style: none;
+  padding: 0;
 }
 
 .preload * {
-  transition:none !important;
+  transition: none !important;
 }
 
 img {
-  max-width:100%;
-  height:auto;
+  max-width: 100%;
+  height: auto;
 }
 
 picture {
-  display:block;
+  display: block;
 }
 
 button {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 *:focus:hover {
-  outline:0;
+  outline: 0;
 }
 
 img {
-  max-width:100%;
-  height:auto;
+  max-width: 100%;
+  height: auto;
 }
