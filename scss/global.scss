@@ -27,7 +27,47 @@
 @use "./03_components/skipLinks";
 @use "./03_components/drupalAdminTabs";
 
+<<<<<<< HEAD
 // use pages and sections
 @use "./04_pagesSections/contentPage";
 @use "./04_pagesSections/frontPage";
 @use "./04_pagesSections/sectionalColor";
+=======
+
+// Import sitewide base
+@import './02_base/cssVariables';
+@import './02_base/normalize';
+@import './02_base/webfonts'; // if the project requires webfonts, place @font-face rules here
+@import './02_base/layouts';
+@import './02_base/cke';
+@import './02_base/typography';
+@import './02_base/forms';
+
+
+// Import Components
+@import './03_components/siteBranding';
+@import './03_components/header';
+@import './03_components/nav__main';
+@import './03_components/nav__highlight';
+// @import './03_components/breadcrumbs';
+@import './03_components/tags';
+@import './03_components/card';
+@import './03_components/footer';
+@import './03_components/sidebar';
+@import './03_components/carousel';
+@import './03_components/paragraph';
+@import './03_components/pagination';
+// @import './03_components/socialLinks';
+@import './03_components/embedVideo';
+
+@import './03_components/cookieMessage';
+@import './03_components/skipLinks';
+@import './03_components/drupalAdminTabs';
+
+
+
+// Import pages and sections
+@import './04_pagesSections/contentPage';
+@import './04_pagesSections/frontPage';
+@import './04_pagesSections/sectionalColor';
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c

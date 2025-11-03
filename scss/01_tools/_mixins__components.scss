@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 @use "./mixins__display" as *;
+=======
+
+
+/*  Animate Into Viewport effects
+*********************************** */
+
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
 
 @mixin burgerButton {
   .line {
@@ -83,12 +91,22 @@
 }
 
 @mixin paneSidePaddings {
+<<<<<<< HEAD
   padding: {
     @include clamp(left, 20, 85, 1440);
     @include clamp(right, 20, 85, 1440);
   }
 }
 
+=======
+  padding:{
+    @include clamp(left,20,85,1440);
+    @include clamp(right,20,85,1440);
+  }
+}
+
+
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
 // @mixin applySectionalColor($selector, $alpha) {
 
 //   #{$selector} {

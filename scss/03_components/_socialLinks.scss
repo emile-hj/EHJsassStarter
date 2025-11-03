@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "../01_tools/01_tools" as *;
 
 .social_media_links {
@@ -14,6 +15,26 @@
     &:last-child {
       margin-right: 0;
     }
+=======
+
+.social_media_links {
+	list-style:none;
+
+  display:flex;  
+	padding:0;
+	margin:0;
+
+
+
+
+	li {
+		margin:{
+			right:1.1em;
+		}
+		&:last-child {
+			margin-right:0;
+		}
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
   }
 
   a {
@@ -24,6 +45,7 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     // background-size: 90% auto;
+<<<<<<< HEAD
     background-size: contain;
   }
 
@@ -44,4 +66,28 @@
       @include asset__social(twitter, beta);
     }
   }
+=======
+    background-size:contain;
+  }
+
+  .linkedin a {
+    @include asset__social(linkedin,alpha);
+
+    &:hover,
+    &:focus-visible {
+      @include asset__social(linkedin,beta);
+    }
+
+  }
+
+  .twitter a {
+    @include asset__social(twitter,alpha);
+
+    &:hover,
+    &:focus-visible {
+      @include asset__social(twitter,beta);
+    }
+  }
+
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
 }

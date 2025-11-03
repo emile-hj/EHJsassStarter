@@ -192,6 +192,10 @@
     ol {
       margin-bottom: 0;
       li {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
       }
     }
 
@@ -217,6 +221,7 @@
 
       &::before {
         content: counter(item);
+<<<<<<< HEAD
         font-weight: 500;
       }
 
@@ -233,8 +238,32 @@
             content: counter(lower-alpha, lower-alpha);
           }
         }
+=======
+        font-weight:500;
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
       }
+
+      > ol {
+        counter-reset:lower-alpha;
+
+        // list-style-type:lower-alpha;
+        
+        // only ol li
+        > li {
+          counter-increment: lower-alpha;
+
+          &::before {
+            content:counter(lower-alpha, lower-alpha);
+          }
+        }
+
+      }
+    
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 7768c1152c4c0fb8941ddc753d69799fc088891c
   }
 
   /*  Images
